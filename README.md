@@ -1,4 +1,4 @@
-<p>I introduce Imaginary with Grid design (two columns index page) for Japanese and English.</p>
+<p>I introduce Imaginary with grid design (two columns index page) for Japanese and English.</p>
 
 <h2>Some features</h2>
 
