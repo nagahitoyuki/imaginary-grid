@@ -1,4 +1,4 @@
-<h2>About content</h2>
+<h2>About theme</h2>
 
 <p>I introduce Imaginary with grid design (two columns index page) for Japanese and English.</p>
 
