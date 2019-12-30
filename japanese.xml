@@ -684,7 +684,7 @@ body {position:relative}
 .Blog h3.post-title, .FeaturedPost .post-title {line-height:calc(var(--body-lineheight) - .2)}
 .PopularPosts .post-title {line-height:var(--body-lineheight)}
 
-/* ページボディ */
+/* ページボディー */
 body:not(.item-view) .blog-posts {display:grid;grid-template-columns:1fr 1fr;column-gap:var(--maincolumn-padding)}
 body:not(.item-view) .Blog article {margin-bottom:var(--maincolumn-padding)}
 body:not(.item-view) .Blog .post {height:100%;display:grid;grid-template-rows:auto 1fr auto}
