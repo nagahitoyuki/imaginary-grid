@@ -426,7 +426,7 @@ body:not(.item-view) .post-bottom {align-self:end}
 .FeaturedPost article {display:grid}
 .FeaturedPost .post-title,.FeaturedPost .post-title a,.FeaturedPost .post-title a:hover,.FeaturedPostPost .post-title a:visited {color:$(posts.title.color)}
 .FeaturedPost .post-title {margin:0;grid-column:1/2;grid-row:1/2;z-index:1}
-.FeaturedPost .post-title a {font:$(posts.title.font);display:grid;justify-content:center;align-items:center;padding:var(--maincolumn-padding);text-align:center;max-width:100%}
+.FeaturedPost .post-title a {background-color:rgba(0,0,0,0.275);display:grid;justify-content:center;align-items:center;padding:var(--maincolumn-padding);text-align:center;max-width:100%}
 .FeaturedPost .has-img .post-title a {color:#ffffff}
 .FeaturedPost .snippet-thumbnail {grid-column:1/2;grid-row:1/2}
 .FeaturedPost .snippet-thumbnail img {width:100%;max-width:100%;height:100%;margin-bottom:0}
