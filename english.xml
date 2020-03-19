@@ -65,7 +65,10 @@
   <Variable name="body.background" description="Background"
       color="$(body.background.color)"
       type="background"
-      default="$(color) none repeat scroll center center" value="$(color) url(http://3.bp.blogspot.com/-xw41YEV073w/XMucy3oWvJI/AAAAAAAAZUI/IkK9SQEnWac3AKNx71W6Kyg4JRj3aUSKQCK4BGAYYCw/s0/imaginary-gray.png) no-repeat scroll top center"/>
+      default="$(color) none repeat scroll center center" value="$(color) none no-repeat scroll center center"/>
+  <Variable name="blog.header.color" description="Blog header color"
+      type="color"
+      default="#c0c0c0"  value="#c0c0c0"/>
   <Variable name="body.background.color" description="Body background color"
       type="color"
       default="#f5f5dc"  value="#f5f5dc"/>
@@ -313,7 +316,7 @@ pre {white-space:pre-wrap}
 
 /* Header background image */
 .bg-photo-container {height:$(body.background.height);overflow:hidden;position:absolute;width:100%;z-index:1}
-.bg-photo {background:$(body.background);background-attachment:scroll;background-size:cover;filter:blur($(body.background.blur));height:calc(100% + 2 * $(body.background.blur));left:$(0 - body.background.blur);position:absolute;top:$(0 - body.background.blur);width:calc(100% + 2 * $(body.background.blur))}
+.bg-photo {background:$(body.background);background-attachment:scroll;background-size:cover;filter:blur($(body.background.blur));height:calc(100% + 2 * $(body.background.blur));left:$(0 - body.background.blur);position:absolute;top:$(0 - body.background.blur);width:calc(100% + 2 * $(body.background.blur));background-color:$(blog.header.color)}
 .bg-photo {background-attachment:scroll !important}
 
 /* Balancer */
@@ -401,7 +404,7 @@ input::placeholder {color:$(search.placeholder.color);opacity:.6}
 .page_body.has-vertical-ads .centered .centered-bottom {display:inline-block;width:calc(100% - 174px)}
 .vertical-ad-placeholder {height:600px}
 .vertical-ad-placeholder span {margin-top:290px;padding:0 40px}
-.vertical-ad-container {float:$(endSide);margin-$endSide:var(--maincolumn-padding) / 2);width:128px}
+.vertical-ad-container {float:$(endSide);margin-$endSide:calc(var(--maincolumn-padding) / 2);width:128px}
 .vertical-ad-container .AdSense+.AdSense {margin-top:calc(var(--maincolumn-padding) + var(--maincolumn-padding) / 2)}
 .inline-ad {display:none;overflow:hidden;max-width:100%;width:100%;height:auto}
 .adsbygoogle {display:block;overflow:hidden}
@@ -426,7 +429,7 @@ body:not(.item-view) .post-bottom {align-self:end}
 .FeaturedPost article {display:grid}
 .FeaturedPost .post-title,.FeaturedPost .post-title a,.FeaturedPost .post-title a:hover,.FeaturedPostPost .post-title a:visited {color:$(posts.title.color)}
 .FeaturedPost .post-title {margin:0;grid-column:1/2;grid-row:1/2;z-index:1}
-.FeaturedPost .post-title a {font:$(posts.title.font);display:grid;justify-content:center;align-items:center;width:100%}
+.FeaturedPost .post-title a {display:grid;justify-content:center;align-items:center;padding:var(--maincolumn-padding);text-align:center;max-width:100%;background-color:rgba(0,0,0,0.275)}
 .FeaturedPost .has-img .post-title a {color:#ffffff}
 .FeaturedPost .snippet-thumbnail {grid-column:1/2;grid-row:1/2}
 .FeaturedPost .snippet-thumbnail img {width:100%;max-width:100%;height:100%;margin-bottom:0}
@@ -434,8 +437,8 @@ body:not(.item-view) .post-bottom {align-self:end}
 /* Post title */
 .Blog .post-title {margin-top:0;margin-bottom:16px}
 .Blog .post-title a,.post-title a:hover,.post-title a:visited{color:$(posts.title.color)}
-.Blog h1.post-title a {font:$(posts.title.font)}
-.Blog h3.post-title a, .FeaturedPost .post-title a {font:$(posts.stream.title.font)}
+.Blog h1.post-title {font:$(posts.title.font)}
+.Blog h3.post-title, .FeaturedPost .post-title {font:$(posts.stream.title.font)}
 
 /* Post header / footer */
 .post-footer,.post-header {display:flex;color:$(posts.byline.color)}
@@ -1204,7 +1207,7 @@ body#layout .hamburger-menu {display: none;}
 <div id='floatingbar'>
 <b:class cond='data:hasVerticalAds' name='narrow'/>
   <div id='left-floating'>
-    <span class='svg-icon-24-button hamburger-menu'><svg class='svg-icon-24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M0 0h24v24H0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg></span>
+    <span aria-label='Side bar' class='svg-icon-24-button hamburger-menu'><svg class='svg-icon-24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M0 0h24v24H0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg></span>
      <b:if cond='data:view.isLayoutMode or data:widgets any (w =&gt; w.sectionId == &quot;search_top&quot;)'>
         <div class='search'>
         <b:class cond='data:view.isSearch and data:view.search.query' name='focused'/>
@@ -1214,7 +1217,7 @@ body#layout .hamburger-menu {display: none;}
            <b:include name='content'/>
          </b:includable>
             <b:includable id='content'>
-           <div class='widget-content hidden' id='swc' role='search'>
+           <div class='widget-content hidden' id='swc'>
              <b:include name='searchForm'/>
            </div>
          </b:includable>
@@ -1234,7 +1237,7 @@ body#layout .hamburger-menu {display: none;}
           </b:widget>
         </b:section>
 
-     <span class='svg-icon-24-button search-expand' expr:aria-label='data:messages.search.escaped'><svg class='svg-icon-24 touch-icon' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/><path d='M0 0h24v24H0z' fill='none'/></svg></span>
+     <span class='svg-icon-24-button search-expand' expr:aria-label='data:messages.search.escaped' role='search'><svg class='svg-icon-24 touch-icon' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/><path d='M0 0h24v24H0z' fill='none'/></svg></span>
     </div>
     </b:if>
   </div>
@@ -1249,7 +1252,7 @@ body#layout .hamburger-menu {display: none;}
 
 <div class='hidden' id='back-button-box'>
   <div class='back-button'>
-    <a class='svg-icon-24-button' href='#blog-title'><svg class='svg-icon-back' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M4 20 L12 4, 20 20 Q12 18, 4 20Z'/></svg></a>
+    <a aria-label='Back button' class='svg-icon-24-button' href='#blog-title'><svg class='svg-icon-back' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M4 20 L12 4, 20 20 Q12 18, 4 20Z'/></svg></a>
   </div>
 </div>
 
@@ -1335,36 +1338,9 @@ body#layout .hamburger-menu {display: none;}
   </div>
   </section>
 </b:includable>
-    <b:includable id='postFooterJumpLink'>
-  <span class='jump-link'>
-    <a expr:href='data:post.hasJumpLink ? data:post.url fragment &quot;more&quot; : data:post.url' expr:title='data:post.title'>
-      <data:blog.jumpLinkMessage/>
-    </a>
-  </span>
-</b:includable>
-    <b:includable id='postSnippet'>
-  <div expr:class='(data:snippetPrefix ?: &quot;post&quot;) + &quot;-snippet snippet-container&quot;'>
-    <p class='snippet-item'>
-    <b:eval expr='data:post.body snippet { length: 280, links: false, linebreaks: false, ellipsis: true }'/>
-    </p>
-  </div>
-</b:includable>
     <b:includable id='snippetedPostContent'>
   <b:include cond='data:this.postDisplay.showTitle' name='snippetedPostTitle'/>
-  <a expr:href='data:post.url'>
   <b:include cond='data:post.featuredImage and data:this.postDisplay.showFeaturedImage' data='post' name='snippetedPostThumbnail'/>
-  <b:include cond='data:this.postDisplay.showSnippet' data='post' name='postSnippet'/>
-  </a>
-  <div class='post-footer'>
-    <span class='byline archive-link'>
-    <b:if cond='data:post.url and data:post.date.month lt 10'>
-      <a expr:href='data:view.url path (data:post.date.year + &quot;/0&quot; + data:post.date.month + &quot;/&quot;)' expr:title='data:messages.archive' rel='archives'><data:messages.archive/></a>
-    <else/>
-      <a expr:href='data:view.url path (data:post.date.year + &quot;/&quot; + data:post.date.month + &quot;/&quot;)' expr:title='data:messages.archive' rel='archives'><data:messages.archive/></a>
-    </b:if>
-    </span>
-    <b:include data='post' name='postFooterJumpLink'/>
-  </div>
 </b:includable>
     <b:includable id='snippetedPostThumbnail'>
   <div class='snippet-thumbnail'>
@@ -1377,13 +1353,14 @@ body#layout .hamburger-menu {display: none;}
 </b:includable>
     <b:includable id='snippetedPostTitle'>
   <h3 class='post-title'>
-    <a class='url' expr:href='data:post.url' rel='bookmark' title='permanent link'><data:post.title/></a>
+    <a class='url' expr:href='data:post.url' rel='bookmark' title='permanent link'><span><data:post.title/></span></a>
   </h3>
 </b:includable>
     <b:includable id='snippetedPosts'>
   <div role='feed'>
     <b:loop values='data:posts' var='post'>
     <article class='post'>
+    <b:class cond='data:post.featuredImage' name='has-img'/>
       <b:include name='snippetedPostContent'/>
     </article>
     </b:loop>
@@ -1959,19 +1936,7 @@ avic.innerHTML = &quot;<svg class='avatarIcon'><use xlink:href='/responsive/spri
 
 <aside>
 <b:class cond='data:view.isMultipleItems' name='isf'/>
-<b:section class='sub_main' cond='!data:view.isError' id='sub_main' maxwidgets='5' name='Page Sub' showaddelement='true'>
-  <b:widget id='Text1' locked='false' title='Information' type='Text' visible='true'>
-    <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<p>The default header background image (grey) can be removed or changed from "Background" of theme in Blogger edit screen</p>]]></b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <b:include name='widget-title'/>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-</b:includable>
-  </b:widget>
-</b:section>
+<b:section class='sub_main' cond='!data:view.isError' id='sub_main' maxwidgets='5' name='Page Sub' showaddelement='true'/>
 </aside>
 </div>
 
@@ -2022,7 +1987,7 @@ avic.innerHTML = &quot;<svg class='avatarIcon'><use xlink:href='/responsive/spri
 
 <aside class='sidebar-container container sidebar-invisible slideout-sidebar'>
   <div class='navigation'>
-    <span class='svg-icon-24-button close-button'><svg class='svg-icon-24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/><path d='M0 0h24v24H0z' fill='none'/></svg></span>
+    <span aria-label='Close button' class='svg-icon-24-button close-button'><svg class='svg-icon-24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/><path d='M0 0h24v24H0z' fill='none'/></svg></span>
     </div>
       <div class='sidebar_top_wrapper'>
         <b:class cond='data:widgets none w =&gt; w.sectionId == &quot;sidebar_top&quot;' name='no-items'/>
