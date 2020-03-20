@@ -438,7 +438,7 @@ body:not(.item-view) .post-bottom {align-self:end}
 .Blog .post-title {margin-top:0;margin-bottom:16px}
 .Blog .post-title a,.post-title a:hover,.post-title a:visited{color:$(posts.title.color)}
 .Blog h1.post-title {font:$(posts.title.font)}
-.Blog h3.post-title, .FeaturedPost .post-title {font:$(posts.stream.title.font)}
+.Blog h2.post-title, .FeaturedPost .post-title {font:$(posts.stream.title.font)}
 
 /* Post header / footer */
 .post-footer,.post-header {display:flex;color:$(posts.byline.color)}
@@ -689,7 +689,7 @@ body {position:relative}
 
 /* Post title */
 .Blog h1.post-title a {line-height:calc(var(--body-lineheight) - .2)}
-.Blog h3.post-title a, .FeaturedPost .post-title a {line-height:calc(var(--body-lineheight) - .2)}
+.Blog h2.post-title a, .FeaturedPost .post-title a {line-height:calc(var(--body-lineheight) - .2)}
 
 /* Page body */
 body:not(.item-view) .blog-posts {display:grid;grid-template-columns:1fr 1fr;column-gap:var(--maincolumn-padding)}
@@ -697,7 +697,7 @@ body:not(.item-view) .Blog article {margin-bottom:var(--maincolumn-padding)}
 body:not(.item-view) .Blog .post {height:100%;display:grid;grid-template-rows:auto 1fr auto}
 body:not(.item-view) .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) * 1.25)}
 body.item-view .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) * 2.25)}
-.Blog .blog-posts h3.post-title {width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.Blog .blog-posts h2.post-title {width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 }
 
 /* Below the width of horizontal tablet */
@@ -711,7 +711,7 @@ body.item-view .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) *
 
 /* Post title */
 .Blog h1.post-title a {line-height:calc(var(--body-lineheight) - .2)}
-.Blog h3.post-title a, .FeaturedPost .post-title a {line-height:calc(var(--body-lineheight) - .15)}
+.Blog h2.post-title a, .FeaturedPost .post-title a {line-height:calc(var(--body-lineheight) - .15)}
 
 /* Posted images */
 body.item-view .post-body a[imageanchor="1"][style*="float: left;"],body.item-view .post-body a[imageanchor="1"][style*="float: right;"] {float:none!important;clear:none!important}
@@ -847,9 +847,9 @@ body#layout .hamburger-menu {display: none;}
   </div>
 </b:includable>
     <b:includable id='snippetedPostTitle'>
-  <h3 class='post-title'>
+  <h2 class='post-title'>
     <a class='url' expr:href='data:post.url' rel='bookmark' title='permanent link'><data:post.title/></a>
-  </h3>
+  </h2>
 </b:includable>
     <b:includable id='snippetedPosts'>
   <div role='feed'>
@@ -1352,9 +1352,9 @@ body#layout .hamburger-menu {display: none;}
   </div>
 </b:includable>
     <b:includable id='snippetedPostTitle'>
-  <h3 class='post-title'>
+  <h2 class='post-title'>
     <a class='url' expr:href='data:post.url' rel='bookmark' title='permanent link'><span><data:post.title/></span></a>
-  </h3>
+  </h2>
 </b:includable>
     <b:includable id='snippetedPosts'>
   <div role='feed'>
@@ -1786,9 +1786,9 @@ body#layout .hamburger-menu {display: none;}
     <b:includable id='postTitle' var='post'>
   <b:if cond='data:post.title != &quot;&quot;'>
      <b:if cond='data:post.link or (data:post.url and data:view.url != data:post.url)'>
-       <h3 class='post-title'>
+       <h2 class='post-title'>
         <a expr:href='data:post.link ?: data:post.url' rel='bookmark' title='permanent link'><data:post.title/></a>
-       </h3>
+       </h2>
       <b:else/>
        <h1 class='post-title entry-title' id='post-title'>
          <a class='url uid' expr:href='data:post.url' rel='bookmark' title='permanent link'><data:post.title/></a>
@@ -1916,9 +1916,9 @@ avic.innerHTML = &quot;<svg class='avatarIcon'><use xlink:href='/responsive/spri
   </div>
 </b:includable>
     <b:includable id='snippetedPostTitle'>
-  <h3 class='post-title'>
+  <h2 class='post-title'>
     <a class='url' expr:href='data:post.url' rel='bookmark' title='permanent link'><data:post.title/></a>
-  </h3>
+  </h2>
 </b:includable>
     <b:includable id='snippetedPosts'>
   <div role='feed'>
