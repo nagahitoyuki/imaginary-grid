@@ -439,7 +439,7 @@ body:not(.item-view) .post-bottom {align-self:end}
 .Blog .post-title {margin-top:0;margin-bottom:20px;}
 .Blog .post-title a,.post-title a:hover,.post-title a:visited{color:$(posts.title.color)}
 .Blog h1.post-title {font:$(posts.title.font)}
-.Blog h3.post-title, .FeaturedPost .post-title {font:$(posts.stream.title.font)}
+.Blog h2.post-title, .FeaturedPost .post-title {font:$(posts.stream.title.font)}
 
 /* 記事のヘッダー／フッター */
 .post-footer,.post-header {display:flex;color:$(posts.byline.color)}
@@ -684,7 +684,7 @@ body {position:relative}
 
 /* 記事の題名 */
 .Blog h1.post-title {line-height:calc(var(--body-lineheight) - .2)}
-.Blog h3.post-title, .FeaturedPost .post-title {line-height:calc(var(--body-lineheight) - .2)}
+.Blog h2.post-title, .FeaturedPost .post-title {line-height:calc(var(--body-lineheight) - .2)}
 .PopularPosts .post-title {line-height:var(--body-lineheight)}
 
 /* ページボディー */
@@ -693,7 +693,7 @@ body:not(.item-view) .Blog article {margin-bottom:var(--maincolumn-padding)}
 body:not(.item-view) .Blog .post {height:100%;display:grid;grid-template-rows:auto 1fr auto}
 body:not(.item-view) .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) * 1.25)}
 body.item-view .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) * 2.25)}
-.Blog .blog-posts h3.post-title {width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.Blog .blog-posts h2.post-title {width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 
 /* 記事の本文 */
 .post-body h1 {font-size:26.5px;line-height:calc(var(--body-lineheight) - .1)}
@@ -764,7 +764,7 @@ div.has-vertical-ads .FeaturedPost .post-title a {height:calc(($(content.width) 
 #blog-title {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 18)}
 body, .post-body, .summary, .snippet-item, .post-body blockquote, .post-body h4 {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 36)}
 .Blog h1.post-title {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 22);line-height:calc(var(--body-lineheight) - .2)}
-.Blog h3.post-title, .FeaturedPost .post-title {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 22);line-height:calc(var(--body-lineheight) - .2)}
+.Blog h2.post-title, .FeaturedPost .post-title {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 22);line-height:calc(var(--body-lineheight) - .2)}
 .post-body h1 {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 22);line-height:calc(var(--body-lineheight) - .2)}
 .post-body h2 {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 26);line-height:calc(var(--body-lineheight) - .05)}
 .post-body h3 {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 30)}
@@ -780,7 +780,7 @@ body, .post-body, .summary, .snippet-item, .post-body blockquote, .post-body h4 
 #blog-title {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 12.5)}
 body, .post-body, .summary, .snippet-item, .post-body blockquote, .post-body h4 {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 22)}
 .Blog h1.post-title {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 15);line-height:calc(var(--body-lineheight) - .1)}
-.Blog h3.post-title, .FeaturedPost .post-title  {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 15);line-height:calc(var(--body-lineheight) - .1)}
+.Blog h2.post-title, .FeaturedPost .post-title  {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 15);line-height:calc(var(--body-lineheight) - .1)}
 .post-body h1 {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 15);line-height:calc(var(--body-lineheight) - .2)}
 .post-body h2 {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 17);line-height:calc(var(--body-lineheight) - .05)}
 .post-body h3 {font-size:calc((100vw - var(--maincolumn-padding) * 2) / 20)}
@@ -871,9 +871,9 @@ body#layout .hamburger-menu {display: none;}
   </div>
 </b:includable>
     <b:includable id='snippetedPostTitle'>
-  <h3 class='post-title'>
+  <h2 class='post-title'>
     <a class='url' expr:href='data:post.url' rel='bookmark' title='permanent link'><data:post.title/></a>
-  </h3>
+  </h2>
 </b:includable>
     <b:includable id='snippetedPosts'>
   <div role='feed'>
@@ -1346,7 +1346,7 @@ body#layout .hamburger-menu {display: none;}
 </b:if>
 
 <b:section class='main' id='page_body' name='Page Body' showaddelement='false'>
-  <b:widget cond='data:view.isHomepage' id='FeaturedPost1' locked='true' title='注目の投稿' type='FeaturedPost' version='2' visible='true'>
+  <b:widget cond='data:view.isHomepage' id='FeaturedPost1' locked='true' title='注目の投稿' type='FeaturedPost' version='2' visible='false'>
     <b:widget-settings>
       <b:widget-setting name='showSnippet'>false</b:widget-setting>
       <b:widget-setting name='showPostTitle'>true</b:widget-setting>
@@ -1376,9 +1376,9 @@ body#layout .hamburger-menu {display: none;}
   </div>
 </b:includable>
     <b:includable id='snippetedPostTitle'>
-  <h3 class='post-title'>
+  <h2 class='post-title'>
     <a class='url' expr:href='data:post.url' rel='bookmark' title='permanent link'><span><data:post.title/></span></a>
-  </h3>
+  </h2>
 </b:includable>
     <b:includable id='snippetedPosts'>
   <div role='feed'>
@@ -1818,9 +1818,9 @@ body#layout .hamburger-menu {display: none;}
     <b:includable id='postTitle' var='post'>
   <b:if cond='data:post.title != &quot;&quot;'>
      <b:if cond='data:post.link or (data:post.url and data:view.url != data:post.url)'>
-       <h3 class='post-title'>
+       <h2 class='post-title'>
         <a expr:href='data:post.link ?: data:post.url' rel='bookmark' title='permanent link'><data:post.title/></a>
-       </h3>
+       </h2>
       <b:else/>
        <h1 class='post-title entry-title' id='post-title'>
          <a class='url uid' expr:href='data:post.url' rel='bookmark' title='permanent link'><data:post.title/></a>
@@ -1948,9 +1948,9 @@ avic.innerHTML = &quot;<svg class='avatarIcon'><use xlink:href='/responsive/spri
   </div>
 </b:includable>
     <b:includable id='snippetedPostTitle'>
-  <h3 class='post-title'>
+  <h2 class='post-title'>
     <a class='url' expr:href='data:post.url' rel='bookmark' title='permanent link'><data:post.title/></a>
-  </h3>
+  </h2>
 </b:includable>
     <b:includable id='snippetedPosts'>
   <div role='feed'>
@@ -1971,7 +1971,7 @@ avic.innerHTML = &quot;<svg class='avatarIcon'><use xlink:href='/responsive/spri
 <b:section class='sub_main' cond='!data:view.isError' id='sub_main' maxwidgets='5' name='Page Sub' showaddelement='true'>
   <b:widget id='Text1' locked='false' title='お知らせ' type='Text' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[<p>テーマデザイナーでの文字サイズの変更は横向きタブレットかパソコン以上の画面でしか反映しません。縦向きタブレット、スマホでの文字サイズの変更はBloggerのテーマのhtml編集かバックアップ／復元からskin内の二つに振り分けられたmedia screen内のfont-sizeを変更して下さい。</p><p>例＿<code>font-size:calc((100vw - var(--maincolumn-padding) * 2) / 22)}</code></p><p>右端の数字が一行当たりの文字数になり、減らすと文字サイズが大きくなり、増やすと文字サイズが小さくなります。</p><h4>対応する指定先</h4><dl><dt>#blog-title</dt><dd>ブログ名</dd><dt>body, .post-body, .summary, .snippet-item, .post-body blockquote, .post-body h4</dt><dd>ブログ、記事／追加ページの本文、ブログの投稿のスニペット、注目と人気の投稿のスニペット、記事／追加ページの引用、記事／追加ページの見出しのh4</dd><dt>.Blog h1.post-title a<dd>記事／追加ページの記事／追加タイトル</dd><dt>.Blog h3.post-title a, .FeaturedPost .post-title a</dt><dd>ブログと注目の投稿のスニペットの記事タイトル</dd><dt>.post-body h1</dt><dd>記事／追加ページの見出しのh1</dd><dt>.post-body h2</dt><dd>記事／追加ページの見出しのh2</dd><dt>.post-body h3</dt><dd>記事／追加ページの見出しのh3</dd><dt>.post-body h5</dt><dd>記事／追加ページの見出しのh5</dd><dt>.post-body h6</dt><dd>記事／追加ページの見出しのh6</dd><dt>.PopularPosts .post-title a</dt><dd>人気の投稿のスニペットの記事タイトル</dd></dl>]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[<p>テーマデザイナーでの文字サイズの変更は横向きタブレットかパソコン以上の画面でしか反映しません。縦向きタブレット、スマホでの文字サイズの変更はBloggerのテーマのhtml編集かバックアップ／復元からskin内の二つに振り分けられたmedia screen内のfont-sizeを変更して下さい。</p><p>例＿<code>font-size:calc((100vw - var(--maincolumn-padding) * 2) / 22)}</code></p><p>右端の数字が一行当たりの文字数になり、減らすと文字サイズが大きくなり、増やすと文字サイズが小さくなります。</p><h4>対応する指定先</h4><dl><dt>#blog-title</dt><dd>ブログ名</dd><dt>body, .post-body, .summary, .snippet-item, .post-body blockquote, .post-body h4</dt><dd>ブログ、記事／追加ページの本文、ブログの投稿のスニペット、注目と人気の投稿のスニペット、記事／追加ページの引用、記事／追加ページの見出しのh4</dd><dt>.Blog h1.post-title a<dd>記事／追加ページの記事／追加タイトル</dd><dt>.Blog h2.post-title a, .FeaturedPost .post-title a</dt><dd>ブログと注目の投稿のスニペットの記事タイトル</dd><dt>.post-body h1</dt><dd>記事／追加ページの見出しのh1</dd><dt>.post-body h2</dt><dd>記事／追加ページの見出しのh2</dd><dt>.post-body h3</dt><dd>記事／追加ページの見出しのh3</dd><dt>.post-body h5</dt><dd>記事／追加ページの見出しのh5</dd><dt>.post-body h6</dt><dd>記事／追加ページの見出しのh6</dd><dt>.PopularPosts .post-title a</dt><dd>人気の投稿のスニペットの記事タイトル</dd></dl>]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <b:include name='widget-title'/>
