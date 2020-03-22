@@ -379,16 +379,16 @@ iframe.b-hbp-video {border:0}
 #right-floating {margin-$startSide:auto;display:grid;grid-auto-flow:column;align-items:center;column-gap:4px}
 
 /* SVG icons */
+.svg-icon-24 {width:24px;height:24px;fill:$(sticky.icons.color)}
 .sidebar-container .svg-icon-24 {fill:$(sidebar.icons.color)}
 .centered-bottom .svg-icon-24 {fill:$(posts.icons.color)}
 .svg-icon-24-button, .touch-icon-button {cursor:pointer}
-.svg-icon-24 {width:24px;height:24px;fill:$(sticky.icons.color)}
-.svg-icon-back {stroke-width:2px;stroke:$(sticky.icons.color);fill:transparent}
+.svg-icon-back {stroke-width:2px;stroke:$(sticky.icons.color)}
 .avatarIcon {width:24px;height:24px;fill:$(posts.icons.color);padding:5.5px}
 
 /* Back button */
 .back-button {display:flex;justify-content:center;align-items:center;position:fixed;bottom:calc(var(--maincolumn-padding) - ((var(--floatingbar-height) - 24px) / 2) + 6px);right:calc(var(--maincolumn-padding) - ((var(--floatingbar-height) - 24px) / 2) + 6px);width:var(--floatingbar-height);height:var(--floatingbar-height);border-radius:50%;background-color:$(sticky.background.color);box-sizing:border-box;box-shadow:5px 5px 10px -5px rgba(0,0,0,.35);z-index:50;animation:fadein .2s ease-out}
-.back-button a {margin-bottom:calc(12px - (28px / 3))}
+.back-button svg {margin-bottom:calc(12px - (28px / 3))}
 .fadeout {animation:fadeout .2s ease-out}
 
 /* Search widget */
@@ -1251,7 +1251,7 @@ body#layout .hamburger-menu {display: none;}
 
 <div class='hidden' id='back-button-box'>
   <div class='back-button'>
-    <svg role='img' aria-label='Back to top' class='svg-icon-24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><a class='svg-icon-24-button' href='#blog-title'><path class='svg-icon-back' d='M4 20 L12 4, 20 20 Q12 18, 4 20Z'/></a></svg>
+    <svg role='img' aria-label='Back to top' class='svg-icon-24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><a class='svg-icon-24-button' href='#blog-title'><path class='svg-icon-back' d='M4 20 L12 4, 20 20 Q12 18, 4 20Z' fill='transparent'/></a></svg>
   </div>
 </div>
 
