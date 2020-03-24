@@ -429,10 +429,9 @@ body:not(.item-view) .post-bottom {align-self:end}
 .FeaturedPost {padding:20px var(--maincolumn-padding) 12px;background-color:$(posts.background.color);margin-bottom:var(--maincolumn-padding)}
 .FeaturedPost a,.FeaturedPost a:hover,.FeaturedPost a:visited {color:$(posts.link.color)}
 .FeaturedPost article {display:grid}
-.FeaturedPost .post-title,.FeaturedPost .post-title a,.FeaturedPost .post-title a:hover,.FeaturedPostPost .post-title a:visited {color:$(posts.title.color)}
-.FeaturedPost .post-title {margin:0;grid-column:1/2;grid-row:1/2;z-index:1}
+.FeaturedPost .post-title,.FeaturedPost .post-title a,.FeaturedPost .post-title a:hover,.FeaturedPost .post-title a:visited {color:#ffffff}
+.FeaturedPost .post-title {font:$(posts.stream.title.font);margin:0;grid-column:1/2;grid-row:1/2;z-index:1}
 .FeaturedPost .post-title a {background-color:rgba(0,0,0,0.275);display:grid;justify-content:center;align-items:center;padding:var(--maincolumn-padding);text-align:center;max-width:100%}
-.FeaturedPost .has-img .post-title a {color:#ffffff}
 .FeaturedPost .snippet-thumbnail {grid-column:1/2;grid-row:1/2}
 .FeaturedPost .snippet-thumbnail img {width:100%;max-width:100%;height:100%;margin-bottom:0}
 
@@ -440,7 +439,7 @@ body:not(.item-view) .post-bottom {align-self:end}
 .Blog .post-title {margin-top:0;margin-bottom:20px;}
 .Blog .post-title a,.post-title a:hover,.post-title a:visited{color:$(posts.title.color)}
 .Blog h1.post-title {font:$(posts.title.font)}
-.Blog h2.post-title, .FeaturedPost .post-title {font:$(posts.stream.title.font)}
+.Blog h2.post-title {font:$(posts.stream.title.font);color:$(posts.title.color)}
 
 /* 記事のヘッダー／フッター */
 .post-footer,.post-header {display:flex;color:$(posts.byline.color)}
@@ -1382,7 +1381,6 @@ body#layout .hamburger-menu {display: none;}
   <div role='feed'>
     <b:loop values='data:posts' var='post'>
     <article class='post'>
-    <b:class cond='data:post.featuredImage' name='has-img'/>
       <b:include name='snippetedPostContent'/>
     </article>
     </b:loop>
