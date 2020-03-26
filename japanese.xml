@@ -1283,13 +1283,13 @@ body#layout .hamburger-menu {display: none;}
   <b:section ads='true' class='vertical-ad-container' cond='!data:blog.isMobileRequest and data:hasVerticalAds' id='ads' name='Ads' showaddelement='false' tag='aside'>
     <b:widget id='AdSense1' locked='true' title='' type='AdSense' version='2' visible='true'>
       <b:includable id='main'>
-    <div class='widget-content'>
+    <aside aria-label='広告' class='widget-content'>
     <b:if cond='data:adCode'>
       <data:adCode/>
     <b:else/>
       <b:include name='defaultAdUnit'/>
     </b:if>
-    </div>
+    </aside>
   </b:includable>
   <b:includable id='defaultAdUnit'>
   <b:comment>Clear out style (needs to be a non-empty string)</b:comment>
@@ -1300,13 +1300,13 @@ body#layout .hamburger-menu {display: none;}
     </b:widget>
     <b:widget id='AdSense2' locked='true' title='' type='AdSense' version='2' visible='false'>
       <b:includable id='main'>
-    <div class='widget-content'>
+    <aside aria-label='広告' class='widget-content'>
     <b:if cond='data:adCode'>
       <data:adCode/>
     <b:else/>
       <b:include name='defaultAdUnit'/>
     </b:if>
-    </div>
+    </aside>
   </b:includable>
   <b:includable id='defaultAdUnit'>
   <b:comment>Clear out style (needs to be a non-empty string)</b:comment>
@@ -1634,7 +1634,7 @@ body#layout .hamburger-menu {display: none;}
   </b:if>
 </b:includable>
     <b:includable id='inlineAd' var='post'>
-  <aside>
+  <aside aria-label='広告'>
   <b:class cond='data:post.adNumber + data:numDesktopAds lt data:maxNumAds' name='desktop-ad'/>
   <b:class cond='data:post.adNumber + data:numMobileAds lt data:maxNumAds' name='mobile-ad'/>
     <b:include data='post' name='super.inlineAd'/>
@@ -1785,7 +1785,7 @@ body#layout .hamburger-menu {display: none;}
 </b:includable>
     <b:includable id='postPagination'>
   <b:if cond='!data:blog.isMobileRequest and data:view.isMultipleItems and data:hasVerticalAds'>
-    <aside class='plus-ad'><div class='inline-ad'>
+    <aside aria-label='広告' class='plus-ad'><div class='inline-ad'>
     <b:comment>Clear out style (needs to be a non-empty string)</b:comment>
     <b:with value='&quot;/* Done in css. */&quot;' var='style'>
       <b:include name='super.defaultAdUnit'/>
