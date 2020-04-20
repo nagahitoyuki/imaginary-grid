@@ -757,7 +757,8 @@ div.has-vertical-ads .FeaturedPost .post-title a {height:calc(($(content.width) 
 .Label .remaining-items {margin-top:12px;margin-right:-4px;margin-bottom:-12px}
 
 /* アドセンス広告*/
-.plus-ad .inline-ad {display:block;margin:0 auto calc(var(--maincolumn-padding) * 2.25)}
+.plus-ad .inline-ad {display:block;margin:0 auto)}
+.plus-ad + div {margin-top:calc(var(--maincolumn-padding) * 2.2)}
 }
 
 /* タブレット中心 */
