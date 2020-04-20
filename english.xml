@@ -690,6 +690,8 @@ body {position:relative}
 
 /* Adsense ads */
 .desktop-ad .inline-ad {display:block;margin:calc(var(--maincolumn-padding) / 2) auto}
+.plus-ad .inline-ad {display:block;margin:0 auto}
+.plus-ad + div {margin-top:calc(var(--maincolumn-padding) * 2.2)}
 
 /* Post title */
 .Blog h1.post-title a {line-height:calc(var(--body-lineheight) - .2)}
@@ -728,7 +730,9 @@ body.item-view .post-body a[imageanchor="1"] {margin-left:0!important;margin-rig
 body.item-view .post-body a[imageanchor="1"]+a[imageanchor="1"] {margin-top:16px}
 
 /* Adsense ads */
-.mobile-ad .inline-ad {display:block;height:auto;width:calc(100vw - var(--maincolumn-padding) * 2);margin:calc(var(--maincolumn-padding) / 2) auto} 
+.mobile-ad .inline-ad {display:block;height:auto;width:calc(100vw - var(--maincolumn-padding) * 2);margin:calc(var(--maincolumn-padding) / 2) auto}
+.plus-ad .inline-ad {display:block;height:auto;width:calc(100vw - var(--maincolumn-padding) * 2);margin:0 auto}
+.plus-ad + div {margin-top:calc(var(--maincolumn-padding) * 2.2)}
 .page_body.has-vertical-ads .vertical-ad-container,.page_body.has-vertical-ads .vertical-ad-container ins {display:none}
 .page_body.has-vertical-ads .centered .centered-bottom,.page_body.has-vertical-ads .centered .centered-top {display:block;width:auto}
 }
@@ -756,10 +760,6 @@ div.has-vertical-ads .FeaturedPost .post-title a {height:calc(($(content.width) 
 .byline.post-labels {margin-right:-4px;margin-bottom:-6px}
 .Label .first-items {margin-right:-4px;margin-bottom:-12px}
 .Label .remaining-items {margin-top:12px;margin-right:-4px;margin-bottom:-12px}
-
-/* Adsense ads */
-.plus-ad .inline-ad {display:block;margin:0 auto)}
-.plus-ad + div {margin-top:calc(var(--maincolumn-padding) * 2.2)}
 }
 
 /* Below the width of smartphone */
