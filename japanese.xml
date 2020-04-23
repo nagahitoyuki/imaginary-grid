@@ -450,13 +450,12 @@ body:not(.item-view) .post-bottom {align-self:end}
 .photo {vertical-align:bottom;border-radius:50%;margin-$(endSide):4px}
 .post-footer a {color:$(posts.link.color)}
 .hentry .post-footer {flex-direction:column}
-.post-footer-line {margin-bottom:16px}
 .post-footer-line > span {display:block}
-.pf-last {width:100%;text-align:$endSide;margin-bottom:16px;font-style:oblique}
+.pf-last {width:100%;text-align:$endSide;margin-top:16px;margin-bottom:16px;font-style:oblique}
 .archive-link {margin-$endSide:auto}
 .jump-link {margin-$startSide:auto}
-.post-icons, .post-location {margin-top:16px}
-.reactions iframe {height:20px}
+.post-icons, .post-location {margin-top:16px;margin-bottom:16px}
+.reactions iframe {height:20px;margin-top:16px}
 .author-profile {margin-bottom:16px}
 
 /* 記事の本文とスニペット */
@@ -685,7 +684,7 @@ body {position:relative}
 /* アドセンス広告 */
 .desktop-ad .inline-ad {display:block;margin:calc(var(--maincolumn-padding) / 2) auto}
 .plus-ad .inline-ad {display:block;margin:0 auto}
-.plus-ad + div {margin-top:calc(var(--maincolumn-padding) * 2.2)}
+.plus-ad + div {margin-top:calc(var(--maincolumn-padding) * 2.25)}
 
 /* 記事の題名 */
 .Blog h1.post-title {line-height:calc(var(--body-lineheight) - .2)}
@@ -731,7 +730,7 @@ body.item-view .post-body a[imageanchor="1"]+a[imageanchor="1"] {margin-top:16px
 /* アドセンス広告 */
 .mobile-ad .inline-ad {display:block;height:auto;width:calc(100vw - var(--maincolumn-padding) * 2);margin:calc(var(--maincolumn-padding) / 2) auto}
 .plus-ad .inline-ad {display:block;height:auto;width:calc(100vw - var(--maincolumn-padding) * 2);margin:0 auto}
-.plus-ad + div {margin-top:calc(var(--maincolumn-padding) * 2.2)}
+.plus-ad + div {margin-top:calc(var(--maincolumn-padding) * 2.25)}
 .page_body.has-vertical-ads .vertical-ad-container,.page_body.has-vertical-ads .vertical-ad-container ins {display:none}
 .page_body.has-vertical-ads .centered .centered-bottom,.page_body.has-vertical-ads .centered .centered-top {display:block;width:auto}
 }
