@@ -694,7 +694,7 @@ body {position:relative}
 .PopularPosts .post-title {line-height:var(--body-lineheight)}
 
 /* ページボディー */
-body:not(.item-view) .blog-posts {display:grid;grid-template-columns:1fr 1fr;column-gap:var(--maincolumn-padding)}
+body:not(.item-view) .blog-posts {grid-template-columns:1fr 1fr;column-gap:var(--maincolumn-padding)}
 body:not(.item-view) .Blog article {margin-bottom:var(--maincolumn-padding)}
 body:not(.item-view) .Blog .post {height:100%;display:grid;grid-template-rows:auto 1fr auto}
 body:not(.item-view) .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) * 1.25)}
