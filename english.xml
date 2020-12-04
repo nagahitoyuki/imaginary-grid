@@ -463,7 +463,7 @@ body:not(.item-view) .post-bottom {align-self:end}
 .post-body {font:$(posts.text.font);color:$(posts.text.color);margin:16px 0;line-height:var(--body-lineheight)}
 .post-body a,.post-body a:hover,.post-body a:visited {color:$(posts.link.color)}
 .post-body blockquote {color:$(blockquote.color);font:$(blockquote.font);line-height:inherit}
-.snippet-thumbnail img {width:100%;max-width:100%;margin-bottom:16px}
+.snippet-thumbnail img {margin-bottom:16px}
 .summary {font:$(posts.text.font);color:$(posts.text.color);margin:0 0 16px;line-height:var(--body-lineheight)}
 .post-body h1 {font-size:26px;line-height:calc(var(--body-lineheight) - .15)}
 .post-body h2 {font-size:24px;line-height:calc(var(--body-lineheight) - .15)}
@@ -735,15 +735,25 @@ body.item-view .post-body a[imageanchor="1"]+a[imageanchor="1"] {margin-top:16px
 @media screen and (min-width:$(content.width)){
 
 /* Featured post */
-div:not(.has-vertical-ads) .FeaturedPost .post-title a {height:calc(($(content.width) - var(--maincolumn-padding) * 2) * 2 / 3)}
-div.has-vertical-ads .FeaturedPost .post-title a {height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) * 2 / 3)}
+:not(.has-vertical-ads) .FeaturedPost .post-title a {width:100%;height:calc(($(content.width) - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
+.has-vertical-ads .FeaturedPost .post-title a {width:100%;height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
+:not(.has-vertical-ads) .FeaturedPost .snippet-thumbnail img {width:100%;height:calc(($(content.width) - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
+.has-vertical-ads .FeaturedPost .snippet-thumbnail img {width:100%;height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
+
+/* Post body */
+:not(.has-vertical-ads) .Blog .snippet-thumbnail img {width:calc(($(content.width) - var(--maincolumn-padding) * 2) / 2);height:calc(($(content.width) - var(--maincolumn-padding) * 2) / 3);object-fit:cover}
+.has-vertical-ads .Blog .snippet-thumbnail img {width:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) / 2);height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) / 3);object-fit:cover}
 }
 
 /* Below the width of blog content */
 @media screen and (max-width:$(content.width - 1px)){
 
-/* Featured Post */
-.FeaturedPost .post-title a {height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3)}
+/* Featured post */
+.FeaturedPost .post-title a {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
+.FeaturedPost .snippet-thumbnail img {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
+
+/* Post body */
+.Blog .snippet-thumbnail img {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover;}
 }
 
 /* More than the width of tablet */
