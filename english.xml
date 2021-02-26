@@ -430,7 +430,7 @@ input::placeholder {color:$(search.placeholder.color);opacity:.6}
 .page_body {position:relative;z-index:20}
 .page_body .centered {display:flex;flex-direction:column;margin:0 auto;max-width:$(content.width);min-height:100vh}
 .page_body .centered>* {flex:0 0 auto}
-.blog-posts {background:$(body.background.color);display:grid}
+.blog-posts {background:$(body.background.color);display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr))}
 .Blog article {width:auto;background:$(posts.background.color);box-sizing:border-box;padding:20px var(--maincolumn-padding)}
 body:not(.item-view) .post-bottom {align-self:end}
 
@@ -700,11 +700,13 @@ body {position:relative}
 .Blog h2.post-title a, .FeaturedPost .post-title a {line-height:calc(var(--body-lineheight) - .2)}
 
 /* Page body */
-body:not(.item-view) .blog-posts {grid-template-columns:1fr 1fr;column-gap:var(--maincolumn-padding)}
+body:not(.item-view) .blog-posts {column-gap:var(--maincolumn-padding)}
 body:not(.item-view) .Blog article {margin-bottom:var(--maincolumn-padding)}
 body:not(.item-view) .Blog .post {height:100%;display:grid;grid-template-rows:auto 1fr auto}
 body:not(.item-view) .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) * 1.25)}
-body:not(.item-view) h2.post-title {width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+body:not(.item-view) div.post h2.post-title {width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+body:not(.item-view) .Blog article:nth-child(2n+1):last-child {grid-column:span 2}
+body:not(.item-view) .Blog article:nth-child(2n+1):last-child .snippet-thumbnail img {width:calc($(content.width) - var(--maincolumn-padding) * 2);height:calc(($(content.width) - var(--maincolumn-padding) * 2) / 16 * 9)}
 body.item-view .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) * 2.25)}
 }
 
