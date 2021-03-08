@@ -432,12 +432,12 @@ input::placeholder {color:$(search.placeholder.color);opacity:.6}
 .page_body {position:relative;z-index:20}
 .page_body .centered {display:flex;flex-direction:column;margin:0 auto;max-width:$(content.width);min-height:100vh}
 .page_body .centered>* {flex:0 0 auto}
-.blog-posts {background:$(body.background.color);display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, min(100vw, $(content.width))))}
+.blog-posts {background:$(body.background.color);display:grid;grid-template-columns:repeat(auto-fill, minmax(320pw, 1fr))}
 .Blog article {width:auto;background:$(posts.background.color);box-sizing:border-box;padding:20px var(--maincolumn-padding)}
 body:not(.item-view) .post-bottom {align-self:end}
 
 /* 注目の投稿 */
-.FeaturedPost .title {margin-top:0;margin-bottom:20px}
+.FeaturedPost .title {margin-top:0;margin-bottom:2px}
 .FeaturedPost .title a {color:$(posts.title.color)}
 .FeaturedPost {padding:20px var(--maincolumn-padding) 12px;background-color:$(posts.background.color);margin-bottom:var(--maincolumn-padding)}
 .FeaturedPost a,.FeaturedPost a:hover,.FeaturedPost a:visited {color:$(posts.link.color)}
