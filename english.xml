@@ -428,23 +428,23 @@ input::placeholder {color:$(search.placeholder.color);opacity:.6}
 .inline-ad-placeholder {height:90px}
 .inline-ad-placeholder span{margin-top:36px}
 
-/* Page body */
+/* ページボディー */
 .page_body {position:relative;z-index:20}
 .page_body .centered {display:flex;flex-direction:column;margin:0 auto;max-width:$(content.width);min-height:100vh}
 .page_body .centered>* {flex:0 0 auto}
-.blog-posts {background:$(body.background.color);display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, min(100vw, $(content.width))))}
+.blog-posts {background:$(body.background.color);display:grid;grid-template-columns:repeat(auto-fill, minmax(320pw, 1fr))}
 .Blog article {width:auto;background:$(posts.background.color);box-sizing:border-box;padding:20px var(--maincolumn-padding)}
 body:not(.item-view) .post-bottom {align-self:end}
 
-/* Featured post */
+/* 注目の投稿 */
 .FeaturedPost .title {margin-top:0;margin-bottom:16px}
 .FeaturedPost .title a {color:$(posts.title.color)}
 .FeaturedPost {padding:20px var(--maincolumn-padding) 12px;background-color:$(posts.background.color);margin-bottom:var(--maincolumn-padding)}
 .FeaturedPost a,.FeaturedPost a:hover,.FeaturedPost a:visited {color:$(posts.link.color)}
 .FeaturedPost article {display:grid}
-.FeaturedPost .post-title, .FeaturedPost .post-title a,.FeaturedPost .post-title a:hover,.FeaturedPost .post-title a:visited {color:white}
+.FeaturedPost .post-title,.FeaturedPost .post-title a,.FeaturedPost .post-title a:hover,.FeaturedPost .post-title a:visited {color:#ffffff}
 .FeaturedPost .post-title {font:$(posts.stream.title.font);margin:0;grid-column:1/2;grid-row:1/2;z-index:1}
-.FeaturedPost .post-title a {display:grid;justify-content:center;align-items:center;padding:var(--maincolumn-padding);text-align:center;max-width:100%;background-color:rgba(0,0,0,0.275)}
+.FeaturedPost .post-title a {background-color:rgba(0,0,0,0.275);display:grid;justify-content:center;align-items:center;padding:var(--maincolumn-padding);text-align:center;max-width:100%}
 .FeaturedPost .snippet-thumbnail {grid-column:1/2;grid-row:1/2}
 .FeaturedPost .snippet-thumbnail img {width:100%;max-width:100%;height:100%;margin-bottom:0}
 
