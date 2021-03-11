@@ -962,7 +962,7 @@ body#layout .hamburger-menu {display: none;}
   </a>
 </b:includable>
             <b:includable id='userGoogleProfile'>
-  <div class='g-follow' data-annotation='bubble' data-height='20' expr:data-href='data:userUrl'/>
+  <b:comment>Don&#39;t show G+ profile.</b:comment>
 </b:includable>
             <b:includable id='userLocation'>
   <dd class='profile-data location'><data:location/></dd>
@@ -974,7 +974,6 @@ body#layout .hamburger-menu {display: none;}
             <b:includable id='userProfileData'>
   <dt class='profile-data'>
     <b:include name='userProfileLink'/>
-    <b:include cond='data:hasgoogleprofile' name='userGoogleProfile'/>
   </dt>
 </b:includable>
             <b:includable id='userProfileImage'>
@@ -2116,7 +2115,7 @@ avic.innerHTML = &quot;<svg aria-label='アバター' class='avatarIcon' role='i
   </a>
 </b:includable>
             <b:includable id='userGoogleProfile'>
-  <div class='g-follow' data-annotation='bubble' data-height='20' expr:data-href='data:userUrl'/>
+  <b:comment>Don&#39;t show G+ profile.</b:comment>
 </b:includable>
             <b:includable id='userLocation'>
   <dd class='profile-data location'><data:location/></dd>
@@ -2128,7 +2127,6 @@ avic.innerHTML = &quot;<svg aria-label='アバター' class='avatarIcon' role='i
             <b:includable id='userProfileData'>
   <dt class='profile-data'>
     <b:include name='userProfileLink'/>
-    <b:include cond='data:hasgoogleprofile' name='userGoogleProfile'/>
   </dt>
 </b:includable>
             <b:includable id='userProfileImage'>
