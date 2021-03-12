@@ -8,6 +8,12 @@
   <link href='//pagead2.googlesyndication.com' rel='preconnect'/>
 </b:if>
 <b:if cond='!data:blog.isMobileRequest'>
+<b:if cond='data:skin.vars.body_background.image'>
+  <link as='image' expr:href='resizeImage(data:skin.vars.body_background.image, 640)' media='(max-width:640px) and (min-width:481px)' rel='preload'/>
+  <link as='image' expr:href='resizeImage(data:skin.vars.body_background.image,800)' media='(max-width:800px) and (min-width:641px)' rel='preload'/>
+  <link as='image' expr:href='resizeImage(data:skin.vars.body_background.image, 1200)' media='(max-width:1200px) and (min-width:801px)' rel='preload'/>
+  <link as='image' expr:href='resizeImage(data:skin.vars.body_background.image, 1600)' media='(min-width:1201px)' rel='preload'/>
+</b:if>
   <link expr:href='data:view.url.canonical + &quot;?m=1&quot;' media='only screen and (max-width: 480px)' rel='alternate'/>
 <b:elseif cond='data:skin.vars.body_background.image'/>
   <link as='image' expr:href='resizeImage(data:skin.vars.body_background.image, 480)' rel='preload'/>
@@ -472,8 +478,9 @@ body:not(.item-view) .post-bottom {align-self:end}
 .post-body {font:$(posts.text.font);color:$(posts.text.color);line-height:var(--body-lineheight);margin:20px 0}
 .post-body a,.post-body a:hover,.post-body a:visited {color:$(posts.link.color)}
 .post-body blockquote {color:$(blockquote.color);font:$(blockquote.font);line-height:inherit}
-.snippet-thumbnail img {margin-bottom:16px}
-.summary {font:$(posts.text.font);color:$(posts.text.color);line-height:var(--body-lineheight);margin:0 0 20px}
+.total-snippet {display:inline-block;margin-bottom:20px}
+.Blog .snippet-thumbnail img {margin-bottom:16px}
+.summary {font:$(posts.text.font);color:$(posts.text.color);line-height:var(--body-lineheight);margin-top:0;margin-bottom:0;}
 
 /* ラベル */
 .Label li, .Label .label-size, .post-labels a {background-color:$(labels.background.color);border:1px solid $(labels.background.color);border-radius:.8px;display:inline-block;padding:2px 6px}
@@ -715,6 +722,31 @@ body.item-view .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) *
 .post-body h6 {font-size:10.7px}
 }
 
+/* ブログのコンテンツの幅以上 */
+@media screen and (min-width:$(content.width)){
+
+/* 注目の投稿 */
+:not(.has-vertical-ads) .FeaturedPost .post-title a {width:100%;height:calc(($(content.width) - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
+.has-vertical-ads .FeaturedPost .post-title a {width:100%;height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
+:not(.has-vertical-ads) .FeaturedPost .snippet-thumbnail img {width:100%;height:calc(($(content.width) - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
+.has-vertical-ads .FeaturedPost .snippet-thumbnail img {width:100%;height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
+
+/* 記事の本文 */
+:not(.has-vertical-ads) .Blog .snippet-thumbnail img {width:calc(($(content.width) - var(--maincolumn-padding) * 2) / 2);height:calc(($(content.width) - var(--maincolumn-padding) * 2) / 3);object-fit:cover}
+.has-vertical-ads .Blog .snippet-thumbnail img {width:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) / 2);height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) / 3);object-fit:cover}
+}
+
+/* ブログのコンテンツの幅以下 */
+@media screen and (max-width:$(content.width - 1px)){
+
+/* 注目の投稿 */
+.FeaturedPost .post-title a {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
+.FeaturedPost .snippet-thumbnail img {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
+
+/* 記事の本文 */
+.Blog .snippet-thumbnail img {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover;}
+}
+
 /* 横向きタブレット以下 */
 @media screen and (max-width:768px){
 
@@ -739,31 +771,6 @@ body.item-view .post-body a[imageanchor="1"]+a[imageanchor="1"] {margin-top:16px
 .plus-ad + div {margin-top:calc(var(--maincolumn-padding) * 2.25)}
 .page_body.has-vertical-ads .vertical-ad-container,.page_body.has-vertical-ads .vertical-ad-container ins {display:none}
 .page_body.has-vertical-ads .centered .centered-bottom,.page_body.has-vertical-ads .centered .centered-top {display:block;width:auto}
-}
-
-/* ブログのコンテンツの幅以上 */
-@media screen and (min-width:$(content.width)){
-
-/* 注目の投稿 */
-:not(.has-vertical-ads) .FeaturedPost .post-title a {width:100%;height:calc(($(content.width) - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
-.has-vertical-ads .FeaturedPost .post-title a {width:100%;height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
-:not(.has-vertical-ads) .FeaturedPost .snippet-thumbnail img {width:100%;height:calc(($(content.width) - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
-.has-vertical-ads .FeaturedPost .snippet-thumbnail img {width:100%;height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
-
-/* 記事の本文 */
-:not(.has-vertical-ads) .Blog .snippet-thumbnail img {width:calc(($(content.width) - var(--maincolumn-padding) * 2) / 2);height:calc(($(content.width) - var(--maincolumn-padding) * 2) / 3);object-fit:cover}
-.has-vertical-ads .Blog .snippet-thumbnail img {width:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) / 2);height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) / 3);object-fit:cover}
-}
-
-/* ブログのコンテンツの幅以下 */
-@media screen and (max-width:$(content.width - 1px)){
-
-/* 注目の投稿 */
-.FeaturedPost .post-title a {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
-.FeaturedPost .snippet-thumbnail img {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
-
-/* 記事の本文 */
-.Blog .snippet-thumbnail img {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover;}
 }
 
 /* タブレット以上 */
@@ -1522,13 +1529,7 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)}; ga('create', '
 </b:includable>
     <b:includable id='commentItem' var='comment'>
   <div class='comment' expr:id='&quot;c&quot; + data:comment.id'>
-  <b:if cond='data:comment.authorUserType == &quot;blogger&quot;'>
     <b:include cond='data:blog.enabledCommentProfileImages' name='commentAuthorAvatar'/>
-  <b:else/>
-  <div class='avatar-image-container'>
-    <svg aria-label='アバター' class='avatarIcon' role='img' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/><path d='M0 0h24v24H0z' fill='transparent'/></svg>
-  </div>
-  </b:if>
     <div class='comment-block'>
       <div class='comment-author'>
         <b:if cond='data:comment.authorUrl'>
