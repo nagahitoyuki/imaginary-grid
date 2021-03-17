@@ -98,7 +98,7 @@
       type="length"
       min="0px"
       max="50px"
-      default="4px"  value="4px"/>
+      default="5px"  value="5px"/>
 </Group>
 
 <Group description="Links">
