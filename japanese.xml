@@ -448,7 +448,7 @@ input::placeholder {color:$(search.placeholder.color);opacity:.6}
 body:not(.item-view) .post-bottom {align-self:end}
 
 /* 注目の投稿 */
-.FeaturedPost .title {margin-top:0;margin-bottom:2px}
+.FeaturedPost .title {margin-top:0;margin-bottom:20px}
 .FeaturedPost .title a {color:$(posts.title.color)}
 .FeaturedPost {padding:20px var(--maincolumn-padding) 12px;background-color:$(posts.background.color);margin-bottom:var(--maincolumn-padding)}
 .FeaturedPost a,.FeaturedPost a:hover,.FeaturedPost a:visited {color:$(posts.link.color)}
