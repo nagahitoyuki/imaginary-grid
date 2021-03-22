@@ -2,7 +2,7 @@
 
 <p>I introduce Imaginary with grid design (two columns index page) for Japanese and English.</p>
 
-<img src="https://raw.githubusercontent.com/nagahitoyuki/imaginary-grid/master/firstview.jpg" alt="Header of Imaginary with grid design">
+<img src="https://raw.githubusercontent.com/nagahitoyuki/imaginary-grid/master/imaginary.jpg" alt="Header of Imaginary with grid design">
 
 <h3>Some features</h3>
 
