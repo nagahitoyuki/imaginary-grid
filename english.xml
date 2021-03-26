@@ -689,6 +689,31 @@ body {position:relative}
 .sidebar-container {content-visibility:auto;contain-intrinsic-size:100%}
 }
 
+/* More than the width of blog content */
+@media screen and (min-width:$(content.width)){
+
+/* Featured post */
+:not(.has-vertical-ads) .FeaturedPost .post-title a {width:100%;height:calc(($(content.width) - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
+.has-vertical-ads .FeaturedPost .post-title a {width:100%;height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
+:not(.has-vertical-ads) .FeaturedPost .snippet-thumbnail img {width:100%;height:calc(($(content.width) - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
+.has-vertical-ads .FeaturedPost .snippet-thumbnail img {width:100%;height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
+
+/* Post body */
+:not(.has-vertical-ads) .Blog .snippet-thumbnail img {width:calc(($(content.width) - var(--maincolumn-padding) * 2) / 2);height:calc(($(content.width) - var(--maincolumn-padding) * 2) / 3);object-fit:cover}
+.has-vertical-ads .Blog .snippet-thumbnail img {width:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) / 2);height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) / 3);object-fit:cover}
+}
+
+/* Below the width of blog content */
+@media screen and (max-width:$(content.width - 1px)){
+
+/* Featured post */
+.FeaturedPost .post-title a {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
+.FeaturedPost .snippet-thumbnail img {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
+
+/* Post body */
+.Blog .snippet-thumbnail img {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover;}
+}
+
 /* More than the width of horizontal tablet */
 @media screen and (min-width:769px){
 
@@ -713,31 +738,6 @@ body:not(.item-view) div.post h2.post-title {width:100%;overflow:hidden;white-sp
 body:not(.item-view) .Blog article:nth-child(2n+1):last-child {grid-column:span 2}
 body:not(.item-view) .Blog article:nth-child(2n+1):last-child .snippet-thumbnail img {width:calc($(content.width) - var(--maincolumn-padding) * 2);height:calc(($(content.width) - var(--maincolumn-padding) * 2) / 16 * 9)}
 body.item-view .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) * 2.25)}
-}
-
-/* More than the width of blog content */
-@media screen and (min-width:$(content.width)){
-
-/* Featured post */
-:not(.has-vertical-ads) .FeaturedPost .post-title a {width:100%;height:calc(($(content.width) - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
-.has-vertical-ads .FeaturedPost .post-title a {width:100%;height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
-:not(.has-vertical-ads) .FeaturedPost .snippet-thumbnail img {width:100%;height:calc(($(content.width) - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
-.has-vertical-ads .FeaturedPost .snippet-thumbnail img {width:100%;height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
-
-/* Post body */
-:not(.has-vertical-ads) .Blog .snippet-thumbnail img {width:calc(($(content.width) - var(--maincolumn-padding) * 2) / 2);height:calc(($(content.width) - var(--maincolumn-padding) * 2) / 3);object-fit:cover}
-.has-vertical-ads .Blog .snippet-thumbnail img {width:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) / 2);height:calc(($(content.width) - 174px - var(--maincolumn-padding) * 2) / 3);object-fit:cover}
-}
-
-/* Below the width of blog content */
-@media screen and (max-width:$(content.width - 1px)){
-
-/* Featured post */
-.FeaturedPost .post-title a {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);box-sizing:border-box}
-.FeaturedPost .snippet-thumbnail img {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover}
-
-/* Post body */
-.Blog .snippet-thumbnail img {width:100%;height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3);object-fit:cover;}
 }
 
 /* Below the width of horizontal tablet */
@@ -770,7 +770,7 @@ body.item-view .post-body a[imageanchor="1"]+a[imageanchor="1"] {margin-top:16px
 .page_body.has-vertical-ads .centered .centered-bottom,.page_body.has-vertical-ads .centered .centered-top {display:block;width:auto}
 }
 
-/* More than the width of tablet */
+/* More than the width of smartphone */
 @media screen and (min-width:481px) {
 
 /* Labels */
