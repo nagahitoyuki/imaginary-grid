@@ -1764,7 +1764,7 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)}; ga('create', '
   <b:include data='post' name='postMetadataJSON'/>
 </b:includable>
     <b:includable id='postPagination'>
-  <b:if cond='!data:blog.isMobileRequest and data:view.isMultipleItems and data:post.includeAd'>
+  <b:if cond='!data:blog.isMobileRequest and data:view.isMultipleItems and data:blog.adsenseHasAds'>
     <aside aria-label='Advertisements' class='plus-ad'><div class='inline-ad'>
     <b:comment>Clear out style (needs to be a non-empty string)</b:comment>
     <b:with value='&quot;/* Done in css. */&quot;' var='style'>
