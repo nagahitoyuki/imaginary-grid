@@ -441,7 +441,6 @@ iframe.b-hbp-video {border:0}
 .blog-posts {background:$(body.background.color);display:grid}
 .Blog article {background:$(posts.background.color);box-sizing:border-box;padding:20px var(--maincolumn-padding)}
 body:not(.item-view) .post-bottom {align-self:end}
-body:not(.item-view) .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) * 1.25)}
 body.item-view .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) * 2.25)}
 
 /* 注目の投稿 */
