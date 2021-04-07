@@ -2384,6 +2384,18 @@ bpg.parentNode.remove(); }} else {
 nextIndexObserver.disconnect(); }}); }, {
 rootMargin: &quot;180px&quot;, threshold: 0.5 });
 nextIndex ? (nextIndexObserver.observe(nextIndex), adb.style.visibility = "hidden") : &quot;&quot;;
+<b:else/>
+/* Comment button */
+var commentAllow = document.querySelector("a.cmal");
+var commentButton = document.querySelector(&quot;article.hentry&quot;);
+let commentButtonObserver = new IntersectionObserver(function(entries, observer) {
+entries.forEach(function(entry) {
+if (entry.isIntersecting) {
+if (!cbb.classList.contains(&quot;hidden&quot;)) {
+cbb.classList.add(&quot;fadeout&quot;); setTimeout(function() {
+cbb.classList.add(&quot;hidden&quot;); }, 190); }} else {
+cbb.classList.remove(&quot;fadeout&quot;, &quot;hidden&quot;); }}); });
+commentAllow ? commentButtonObserver.observe(commentButton) : "";
 /* iframe comment */
 var iframeComment = document.querySelector(&quot;iframe.blogger-iframe-colorize&quot;);
 let iframeCommentObserver = new IntersectionObserver(function(entries, observer) {
