@@ -488,7 +488,7 @@ body.item-view .Blog .blog-posts {margin-bottom:calc(var(--maincolumn-padding) *
 .post-body h6 {font-size:11px}
 
 /* Labels */
-.label-name {color:$(labels.text.color);background-color:$(labels.background.color);border:1px solid $(labels.background.color);border-radius:.8px;display:inline-block;padding:2px 6px}
+.label-name {color:$(labels.text.color);background-color:$(labels.background.color);border:1px solid $(labels.background.color);border-radius:.8px;display:inline-block;padding:2px 6px;cursor:none}
 .label-name:hover, .label-name:visited {color:$(labels.text.color)}
 .Label ul {list-style:none;padding-$startSide:0}
 .Label li {margin-bottom:12px}
