@@ -2305,7 +2305,7 @@ var bpht = document.querySelector(&quot;div.blog-posts&quot;).clientHeight;
 bpht === 0 ? document.querySelector(&quot;div.FeaturedPost&quot;).style.marginBottom = &quot;0&quot; : &quot;&quot;;
 function scrollStop(event) {
 event.preventDefault(); }
-function mnisac(state, height){
+function mnisac(state){
 const isac = new Promise (resolve =&gt; {
 if (adb.classList.contains(&quot;hidden&quot;)) {
 requestAnimationFrame(() =&gt; {
