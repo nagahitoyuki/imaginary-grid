@@ -2273,14 +2273,11 @@ const isac = new Promise ((resolve, reject) =&gt; {
 if (adb.classList.contains(&quot;hidden&quot;)) {
 requestAnimationFrame(() =&gt; {
 nextIndex.style.marginTop = &quot;46px&quot;; bpg.parentNode.remove(); adb.classList.remove(&quot;hidden&quot;); }); document.addEventListener(&quot;mousewheel&quot;, scrollStop, {passive: false}); document.addEventListener(&quot;touchmove&quot;, scrollStop, {passive: false}); resolve(&quot;Go ahead&quot;); } else {
-reject(&quot;Too fast&quot;); }});
-isac.then(() =&gt; {
+reject(&quot;Too fast&quot;); }}).then(() =&gt; {
 fetch(npl.getAttribute(&quot;data-href&quot;)).then(response =&gt; {
 if (!response.ok) {
 throw &quot;Connection failed&quot;; } else {
-return response.text(); }}).catch(() =&gt; {
-requestAnimationFrame(() =&gt; {
-nextIndex.style.marginTop = &quot;0&quot;; Blog1.appendChild(bpg.parentNode); }); bpg.parentNode.addEventListener(&quot;click&quot;, mnisac); return alnd(); }).then(text =&gt; {
+return response.text(); }}).then(text =&gt; {
 const parserh = new DOMParser();
 const doch = parserh.parseFromString(text, &quot;text/html&quot;);
 const pst = doch.querySelector(&quot;div.blog-posts&quot;);
@@ -2300,12 +2297,10 @@ if (adcs[0]) {
 adcs.forEach (adc =&gt; {
 adc.parentNode.removeChild(adc); }); }
 const bpNode = document.adoptNode(pst); npl = doch.querySelector(&quot;a.blog-pager-older-link&quot;); requestAnimationFrame(() =&gt; {
-Blog1.appendChild(bpNode); }); return alnd(); }); });
-isac.catch(() =&gt; {
-if (state.target) {
-mnisac(3); } else if (state === 2) {
-mnisac(4); } else {
-return; }}); }
+Blog1.appendChild(bpNode); }); return alnd(); }).catch(() =&gt; {
+requestAnimationFrame(() =&gt; {
+nextIndex.style.marginTop = &quot;0&quot;; Blog1.appendChild(bpg.parentNode); }); bpg.parentNode.addEventListener(&quot;click&quot;, mnisac); return alnd(); }); }).catch(() =&gt; {
+return; }); }
 let nextIndexObserver = new IntersectionObserver((entries, observer) =&gt; {
 entries.forEach(entry =&gt; {
 if (npl) {
@@ -2313,11 +2308,11 @@ const sgtm = entry.rootBounds.height - entry.boundingClientRect.top - 46;
 if (window.pageYOffset === 0) {
 const iolm = window.innerHeight - entry.boundingClientRect.top + 46 ;
 if (iolm &gt; 0) {
-mnisac(0); requestAnimationFrame(() =&gt; {
+mnisac(); requestAnimationFrame(() =&gt; {
 nextIndex.style.marginTop = iolm + 46 + &quot;px&quot;; }); } else if (parseInt(nextIndex.style.marginTop) &gt;= 46) {
-mnisac(1); } else {
+mnisac(); } else {
 return; }} else if (sgtm &gt; 0) {
-mnisac(2); } else {
+mnisac(); } else {
 return; }} else {
 requestAnimationFrame(() =&gt; {
 sub_main.style.display = &quot;initial&quot;; attribution.style.display = &quot;initial&quot;; nextIndex.style.marginTop = &quot;0&quot;; }); nextIndexObserver.disconnect(); }}); }, {
