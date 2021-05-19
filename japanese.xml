@@ -433,7 +433,7 @@ html[dir="rtl"] body #back-button, html[dir="rtl"] body #comment-button, html[di
 .centered {display:flex;flex-direction:column;margin:0 auto;width:min(100vw, $(content.width));height:max-content}
 .centered >* {flex:auto}
 .Blog {contain:content}
-.blog-posts {background:$(body.background.color);display:grid;gap:var(--maincolumn-padding)}
+.blog-posts {background:$(body.background.color);display:grid}
 .Blog article {background:$(posts.background.color);box-sizing:border-box;padding:20px var(--maincolumn-padding)}
 body:not(.item-view) .Blog aside {align-self:stretch;display:grid}
 body:not(.item-view) .post-bottom {align-self:end}
@@ -682,7 +682,7 @@ html[dir="rtl"] .slideout {transform:translateX(0)}
 .PopularPosts .post-title {line-height:var(--body-lineheight)}
 
 /* ページボディー */
-body:not(.item-view) .blog-posts {grid-template-columns:repeat(auto-fill, minmax(320px, 1fr))}
+body:not(.item-view) .blog-posts {grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));column-gap:var(--maincolumn-padding)}
 body:not(.item-view) .Blog article {margin-bottom:var(--maincolumn-padding)}
 body:not(.item-view) .Blog .post {height:100%;display:grid;grid-template-rows:auto 1fr auto}
 body:not(.item-view) .Blog aside {margin-bottom:var(--maincolumn-padding);background-color:$(posts.background.color)}
