@@ -678,7 +678,7 @@ html[dir="rtl"] .slideout {transform:translateX(0)}
 }
 
 /* More than the width of horizontal tablet */
-@media screen and (min-width:769px){
+@media screen and (min-width:961px){
 
 /* Post title */
 .Blog h1.post-title a {line-height:calc(var(--body-lineheight) - .2)}
@@ -700,7 +700,7 @@ body:not(.item-view) .desktop-ad .inline-ad {align-self:center}
 }
 
 /* Below the width of horizontal tablet */
-@media screen and (max-width:768px){
+@media screen and (max-width:960px){
 
 /* Page body */
 .Blog article {max-width:100vw}
