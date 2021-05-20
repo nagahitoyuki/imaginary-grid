@@ -433,7 +433,7 @@ html[dir="rtl"] body #back-button, html[dir="rtl"] body #comment-button, html[di
 .centered {display:flex;flex-direction:column;margin:0 auto;width:min(100vw, $(content.width));height:max-content}
 .centered >* {flex:auto}
 .Blog {contain:content}
-.blog-posts {background:$(body.background.color);display:grid}
+.blog-posts {background:$(body.background.color);display:grid;gap:var(--maincolumn-padding)}
 .Blog article {background:$(posts.background.color);box-sizing:border-box;padding:20px var(--maincolumn-padding)}
 body:not(.item-view) .Blog aside {align-self:stretch;display:grid}
 body:not(.item-view) .post-bottom {align-self:end}
@@ -583,8 +583,7 @@ color:rgba($(posts.title.color.red),$(posts.title.color.green),$(posts.title.col
 .sidebar-container {display:flex;flex-direction:column;flex:auto;width:min($(sidebar.width), 100%);overflow-y:auto;box-sizing:border-box;-webkit-overflow-scrolling: touch;contain:content}
 .navigation, .sidebar_top {background-color:$(sidebar.backgroundColorTop)}
 .sidebar_bottom {background-color:$(sidebar.backgroundColorBottom)}
-.sidebar_top:first-child {padding-top:0}
-.sidebar-container .widget {margin:0 var(--maincolumn-padding);padding:8px 0;color:$(widget.text.color)}
+.sidebar-container .widget {margin:0 var(--maincolumn-padding);color:$(widget.text.color)}
 .sidebar-container .widget .title {color:$(widget.title.color)}
 .sidebar-container .widget ul {list-style:none;padding-$startSide:0}
 .sidebar-container .widget ul ul {margin-$startSide:1em}
@@ -681,8 +680,7 @@ html[dir="rtl"] .slideout {transform:translateX(0)}
 .PopularPosts .post-title {line-height:var(--body-lineheight)}
 
 /* ページボディー */
-body:not(.item-view) .blog-posts {grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));column-gap:var(--maincolumn-padding)}
-body:not(.item-view) .Blog article {margin-bottom:var(--maincolumn-padding)}
+body:not(.item-view) .blog-posts {grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));margin-bottom:var(--maincolumn-padding)}
 body:not(.item-view) .Blog .post {height:100%;display:grid;grid-template-rows:auto 1fr auto}
 body:not(.item-view) .Blog aside {margin-bottom:var(--maincolumn-padding);background-color:$(posts.background.color)}
 body:not(.item-view) div.post h2.post-title {width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
