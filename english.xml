@@ -1685,8 +1685,8 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)}; ga('create', '
 &quot;inLanguage&quot;: &quot;<data:blog.locale.name.jsonEscaped/>&quot;
 }</script>
     <b:else/>
-  <b:include data='post' name='postMetadataJSON'/>
-  </b:if>
+    <b:include data='post' name='postMetadataJSON'/>
+    </b:if>
 </b:includable>
     <b:includable id='postPagination'>
   <div class='blog-pager'>
