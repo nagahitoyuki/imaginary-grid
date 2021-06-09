@@ -422,7 +422,7 @@ html[dir="rtl"] #back-button, html[dir="rtl"] #comment-button, html[dir="rtl"] #
 .top-ad-placeholder span, .inline-ad-placeholder span {margin-top:36px;display:block;text-transform:uppercase;font-weight:700;color:$(posts.title.color)}
 
 /* ページボディー */
-.centered {position:relative;display:flex;flex-direction:column;margin:0 auto;max-width:100%;z-index:20}
+.centered {position:relative;display:flex;flex-direction:column;margin:0 auto;z-index:20}
 .centered>* {flex:auto}
 .Blog {contain:content}
 .blog-posts {background:$(body.background.color);display:grid;gap:var(--maincolumn-padding)}
@@ -694,9 +694,9 @@ body:not(.item-view) .desktop-ad>.inline-ad {align-self:center}
 
 /* ページボディー */
 body:not(.item-view) .blog-posts {grid-template-columns:1fr;margin-bottom:var(--maincolumn-padding)}
-.post {max-width:100vw}
 .blog-posts .snippet-thumbnail {height:calc((100vw - var(--maincolumn-padding) * 2) * 2 / 3)}
 body:not(.item-view) .post+aside {align-self:center}
+.hentry {max-width:100vw}
 
 /* 投稿画像 */
 .item-view .post-body a[imageanchor="1"][style*="float: left;"], .item-view .post-body a[imageanchor="1"][style*="float: right;"] {float:none !important;clear:none!important}
