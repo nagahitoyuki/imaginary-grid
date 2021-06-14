@@ -681,7 +681,7 @@ html[dir="rtl"] .slideout {transform:translateX(0)}
 .feed-view .post+aside {background-color:$(posts.background.color)}
 .feed-view .post h2.post-title {overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .set-one .post, .blog-posts.set-one .post+aside {grid-column:span 2}
-.set-one .snippet-thumbnail {height:calc(($(content.width) - var(--maincolumn-padding) * 2) / 16 * 9);}
+.set-one .snippet-thumbnail {height:calc(($(content.width) - var(--maincolumn-padding) * 2) / 16 * 9)}
 
 /* AdSense ads */
 #AdSense1, .desktop-ad>.inline-ad {display:block;width:100%;max-width:100%}
@@ -1564,7 +1564,7 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)}; ga('create', '
     <b:elseif cond='data:post.featuredImage'/>
     <img expr:alt='data:messages.image' class='snippet-thumbnail' expr:src='data:post.featuredImage' expr:srcset='sourceset(data:post.featuredImage, [480,768,1024], &quot;3:2&quot;)' height='320' loading='lazy' sizes='(max-width:960px) 100vw, 1024px' width='480'/>
     </b:if>
-    <p class='summary'><b:eval expr='data:blog.isMobileRequest ? data:post.snippets.short : data:post.body snippet { length: 380, links: false, linebreaks: false, ellipsis: true }'/></p>
+    <p class='summary'><data:post.snippets.short/></p>
     </a>
 </b:includable>
     <b:includable id='postCommentsAndAd' var='post'>
