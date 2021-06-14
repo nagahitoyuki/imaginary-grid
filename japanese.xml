@@ -1595,7 +1595,7 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)}; ga('create', '
     <b:elseif cond='data:post.featuredImage'/>
     <img expr:alt='data:messages.image' class='snippet-thumbnail' expr:src='data:post.featuredImage' expr:srcset='sourceset(data:post.featuredImage, [480,768,1024], &quot;3:2&quot;)' height='320' loading='lazy' sizes='(max-width:960px) 100vw, 1024px' width='480'/>
     </b:if>
-    <p class='summary'><b:eval expr='data:blog.isMobileRequest ? data:post.snippets.short : data:post.body snippet { length: 320, links: false, linebreaks: false, ellipsis: true }'/></p>
+    <p class='summary'><data:post.snippets.short/></p>
     </a>
 </b:includable>
     <b:includable id='postCommentsAndAd' var='post'>
