@@ -751,7 +751,7 @@ body#layout #floating_menu {display:initial}
     <b:includable id='postSnippet'>
     <p class='snippet-item'>
     <b:if cond='data:widget.sectionId == &quot;sidebar_top&quot; or data:widget.sectionId == &quot;sidebar_bottom&quot;'>
-      <b:eval expr='data:post.body snippet { length: 90, links: false, linebreaks: false, ellipsis: true }'/>
+      <b:eval expr='data:post.body snippet { length: 70, links: false, linebreaks: false, ellipsis: true }'/>
     <b:else/>
       <data:post.snippets.short/>
     </b:if>
@@ -1564,7 +1564,15 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)}; ga('create', '
     <b:elseif cond='data:post.featuredImage'/>
     <img expr:alt='data:messages.image' class='snippet-thumbnail' expr:src='data:post.featuredImage' expr:srcset='sourceset(data:post.featuredImage, [480,768,1024], &quot;3:2&quot;)' height='320' loading='lazy' sizes='(max-width:960px) 100vw, 1024px' width='480'/>
     </b:if>
-    <p class='summary'><data:post.snippets.short/></p>
+    <p class='summary'>
+    <b:with value='data:post.body snippet { length:(data:blog.isMobileRequest ? 250 : 450), links: false, linebreaks: false, ellipsis: true }' var='chros'>
+<b:if cond='data:chros contains &quot;&lt;strong&gt;&quot; or data:chros contains &quot;&lt;b&gt;&quot; or data:chros contains &quot;&lt;em&gt;&quot; or data:chros contains &quot;&lt;i&gt;&quot;'>
+    <data:post.snippets.short/>
+    <b:else/>
+    <b:eval expr='data:chros'/>
+    </b:if>
+    </b:with>
+    </p>
     </a>
 </b:includable>
     <b:includable id='postCommentsAndAd' var='post'>
