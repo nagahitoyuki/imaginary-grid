@@ -1295,7 +1295,7 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)}; ga('create', '
   <div expr:class='data:view.isMultipleItems ? &quot;blog-posts hfeed&quot; : &quot;blog-posts&quot;'>
   <b:attr cond='data:view.isMultipleItems' name='role' value='feed'/>
   <b:attr cond='data:view.isMultipleItems' name='aria-busy' value='false'/>
-  <b:class cond='data:posts.length == 1' name='set-one'/>
+  <b:class cond='data:view.isMultipleItems and data:posts.length == 1' name='set-one'/>
   <b:loop index='i' values='data:posts' var='post'>
   <b:include data='post' name='postCommentsAndAd'/>
   </b:loop></div>
