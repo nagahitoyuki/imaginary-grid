@@ -895,7 +895,7 @@ body#layout #floating_menu {display:initial}
   </dt>
 </b:includable>
             <b:includable id='userProfileImage'>
-  <a expr:href='data:userUrl' rel='me external'>
+  <a expr:href='data:userUrl' rel='me external nofollow'>
     <b:include name='profileImage'/>
   </a>
 </b:includable>
@@ -910,7 +910,7 @@ body#layout #floating_menu {display:initial}
     <b:include name='viewProfileLink'/>
 </b:includable>
             <b:includable id='userProfileLink'>
-  <a class='profile-link' expr:href='data:userUrl' rel='me external'>
+  <a class='profile-link' expr:href='data:userUrl' rel='me external nofollow'>
     <data:displayname/>
   </a>
 </b:includable>
@@ -920,7 +920,7 @@ body#layout #floating_menu {display:initial}
   </dd>
 </b:includable>
             <b:includable id='viewProfileLink'>
-  <a class='profile-link' expr:href='data:userUrl' rel='me external'>
+  <a class='profile-link' expr:href='data:userUrl' rel='me external nofollow'>
     <data:messages.viewMyCompleteProfile/>
   </a>
 </b:includable>
@@ -1929,7 +1929,7 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)}; ga('create', '
   </dt>
 </b:includable>
             <b:includable id='userProfileImage'>
-  <a expr:href='data:userUrl' rel='me external'>
+  <a expr:href='data:userUrl' rel='me external nofollow'>
     <b:include name='profileImage'/>
   </a>
 </b:includable>
@@ -1944,7 +1944,7 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)}; ga('create', '
     <b:include name='viewProfileLink'/>
 </b:includable>
             <b:includable id='userProfileLink'>
-  <a class='profile-link' expr:href='data:userUrl' rel='me external'>
+  <a class='profile-link' expr:href='data:userUrl' rel='me external nofollow'>
     <data:displayname/>
   </a>
 </b:includable>
@@ -1954,7 +1954,7 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)}; ga('create', '
   </dd>
 </b:includable>
             <b:includable id='viewProfileLink'>
-  <a class='profile-link' expr:href='data:userUrl' rel='me external'>
+  <a class='profile-link' expr:href='data:userUrl' rel='me external nofollow'>
     <data:messages.viewMyCompleteProfile/>
   </a>
 </b:includable>
