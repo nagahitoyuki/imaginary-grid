@@ -10,7 +10,7 @@
 
 <h3>SEO measurement</h3>
 
-<figure><img src="https://raw.githubusercontent.com/nagahitoyuki/imaginary-liquid/master/score.jpg" alt="100-points-on-pagespeed-insights"><footer><p>Score｜<a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a></p></footer></figure>
+<figure><img src="https://raw.githubusercontent.com/nagahitoyuki/imaginary-grid/master/score.jpg" alt="100-points-on-pagespeed-insights"><footer><p>Score｜<a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a></p></footer></figure>
 
 <p>I took measures against Google ranking factors such as Website's Crawlability, Mobile First Index and Core Web Vitals.</p>
 
