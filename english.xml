@@ -1375,7 +1375,7 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)}; ga('create', '
           </a>
           <b:include data='comment' name='commentDeleteIcon'/>
         </span>
-     </div>
+      </div>
     </div>
   </div>
 </b:includable>
