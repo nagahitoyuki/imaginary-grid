@@ -452,8 +452,8 @@ html[dir="rtl"] .search-space {vertical-align:text-top}
 #main {margin:0 auto}
 .blog-posts {display:grid;gap:var(--maincolumn-padding);contain:content}
 .blog-posts>.post {background:$(posts.background.color);box-sizing:border-box;padding:20px var(--maincolumn-padding)}
-.feed-view .blog-posts {margin-bottom:var(--maincolumn-padding)}
-.feed-view .post+aside {align-self:stretch;display:grid}
+.hfeed {margin-bottom:var(--maincolumn-padding)}
+.hfeed .post+aside {align-self:stretch;display:grid}
 
 /* Featured post */
 .FeaturedPost {padding:20px var(--maincolumn-padding);background-color:$(posts.background.color);margin-bottom:var(--maincolumn-padding)}
@@ -694,16 +694,16 @@ html[dir="rtl"] .slideout {transform:translateX(0)}
 @media screen and (min-width:$(content.width)) {
 
 /* Page body */
-.feed-view .blog-posts {grid-template-columns:1fr 1fr}
-.feed-view .blog-posts>.post {display:grid;grid-template-rows:auto 1fr auto}
-.feed-view .post+aside {background-color:$(posts.background.color)}
-.feed-view .snippet-title {overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.hfeed {grid-template-columns:1fr 1fr}
+.hfeed>.post {display:grid;grid-template-rows:auto 1fr auto}
+.hfeed .post+aside {background-color:$(posts.background.color)}
+.hfeed .snippet-title {overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .set-one .post, .blog-posts.set-one .post+aside {grid-column:span 2}
-.set-one .snippet-thumbnail {height:calc(($(content.width) - var(--maincolumn-padding) * 2) / 16 * 9)}
+.set-one .snippet-thumbnail {aspect-ratio:16 / 9}
 
 /* AdSense ads */
 .desktop-ad>.inline-ad {display:block;width:100%;max-width:100%}
-.feed-view .desktop-ad>.inline-ad {align-self:center}
+.hfeed .desktop-ad>.inline-ad {align-self:center}
 .desktop-ad>.inline-ad {margin:calc(var(--maincolumn-padding) / 2) auto}
 }
 
@@ -712,8 +712,8 @@ html[dir="rtl"] .slideout {transform:translateX(0)}
 
 /* Page body */
 .post {max-width:100vw}
-.feed-view .blog-posts {grid-template-columns:1fr}
-.feed-view .post+aside {align-self:center}
+.hfeed {grid-template-columns:1fr}
+.hfeed .post+aside {align-self:center}
 
 /* Posted image */
 .item-view .post-body a[imageanchor="1"][style*="float: left;"], .item-view .post-body a[imageanchor="1"][style*="float: right;"] {float:none !important;clear:none!important}
@@ -727,7 +727,7 @@ margin-top:20px}
 /* AdSense ads */
 .mobile-ad>.inline-ad {display:block;width:min(100%, calc(100vw - var(--maincolumn-padding) * 2))}
 .mobile-ad>.inline-ad {margin:calc(var(--maincolumn-padding) / 2) auto}
-.feed-view .mobile-ad>.inline-ad {align-self:center}
+.hfeed .mobile-ad>.inline-ad {align-self:center}
 }
 ]]></b:skin>
 
