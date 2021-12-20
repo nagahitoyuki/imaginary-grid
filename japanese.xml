@@ -1760,11 +1760,11 @@ button</b:comment>
 </b:includable>
             <b:includable id='content'>
   <b:if cond='data:team'>
-    <div class='widget-content team'>
+    <div class='team'>
       <b:include name='teamProfile'/>
     </div>
   <b:else/>
-    <div class='widget-content individual'>
+    <div class='individual'>
       <b:include name='userProfile'/>
     </div>
   </b:if>
