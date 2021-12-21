@@ -486,7 +486,7 @@ html[dir="rtl"] .search-space {vertical-align:text-top}
 .post-body {font:$(posts.text.font);line-height:var(--body-lineheight);color:$(posts.text.color);margin:20px 0}
 .post-body a, .post-body a:hover, .post-body a:visited {color:$(posts.link.color)}
 .post-body blockquote {color:$(blockquote.color);font:$(blockquote.font);line-height:inherit}
-.total-snippet {display:inline-block;width:100%;height:auto;margin-bottom:20px}
+.total-snippet {display:inline-block;width:100%;height:auto;margin-bottom:1em}
 .total-snippet .snippet-thumbnail {aspect-ratio:1.5;width:100%;height:auto;object-fit:cover;margin-bottom:20px}
 .ytpic {background-color:#000}
 .summary {font:$(posts.text.font);line-height:var(--body-lineheight);color:$(posts.text.color);margin-top:0;margin-bottom:0}
