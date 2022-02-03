@@ -2176,7 +2176,7 @@ attribution.style.display = &quot;block&quot;; rmmg(&#39;end&#39;); }); }, {
 rootMargin: bthg + &quot;px&quot;});
 nextIndexObserver.observe(sub_main);
 <b:else/>
-/* Comment button */
+/* Comment */
 const commentAllow = Blog1.querySelector(&quot;a.cmal&quot;), commentButton = Blog1.querySelector(&quot;article.hentry&quot;);
 let commentButtonObserver = new IntersectionObserver((entries, observer) =&gt; {
 entries.forEach(flbt); });
