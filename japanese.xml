@@ -1170,7 +1170,7 @@ button</b:comment>
 </b:includable>
     <b:includable id='snippetedPostThumbnail'>
   <b:with value='data:post.featuredImage.isYoutube ? data:post.featuredImage.youtubeMaxResDefaultUrl : data:post.featuredImage' var='imgurl'>
-    <b:tag class='ft-snippet-thumbnail' decoding='async' expr:alt='data:messages.image' expr:src='data:imgurl.isYoutube ? data:imgurl + "=rw" : data:imgurl' expr:srcset='data:imgurl.isYoutube ? "" : resizeImage(data:imgurl, 640, "3:2") + (data:imgurl contains "googleusercontent.com" ? "-rw-e100" : "") + " 640w, " + resizeImage(data:imgurl, 1280, "3:2") + (data:imgurl contains "googleusercontent.com" ? "-rw-e100" : "") + "1280w"' height='426' name='img' sizes='(max-width:640px) 100vw, 1280px' width='640'>
+    <b:tag class='ft-snippet-thumbnail' decoding='async' expr:alt='data:messages.image' expr:src='data:imgurl.isYoutube ? data:imgurl + "=rw" : data:imgurl' expr:srcset='data:imgurl.isYoutube ? "" : sourceSet(data:imgurl, [640, 1280], "3:2")' height='426' name='img' sizes='(max-width:640px) 100vw, 1280px' width='640'>
     <b:attr name='b:whitespace' value='remove'/>
     <b:if cond='data:imgurl.isYoutube'>
     <b:attr expr:value='resizeImage(data:imgurl, 640, "3:2") + "-rw-e100 640w, " + resizeImage(data:imgurl, 1280, "3:2") + "-rw-e100 1280w"' name='data-hdss'/>   
@@ -1467,7 +1467,7 @@ button</b:comment>
   <a class='total-snippet' expr:href='data:post.url'>
   <b:if cond='data:post.featuredImage'>
   <b:with value='data:post.featuredImage.isYoutube ? data:post.featuredImage.youtubeMaxResDefaultUrl : data:post.featuredImage' var='imgurl'>
-    <b:tag class='snippet-thumbnail' expr:alt='data:messages.image' expr:src='data:imgurl.isYoutube ? data:imgurl + "=rw" : data:imgurl' expr:srcset='data:imgurl.isYoutube ? "" : resizeImage(data:imgurl, 640, "3:2") + (data:imgurl contains "googleusercontent.com" ? "-rw-e100" : "") + " 640w, " + resizeImage(data:imgurl, 1280, "3:2") + (data:imgurl contains "googleusercontent.com" ? "-rw-e100" : "") + " 1280w"' height='426' name='img' sizes='(max-width:640px) 100vw, 1280px' width='640'>
+    <b:tag class='snippet-thumbnail' expr:alt='data:messages.image' expr:src='data:imgurl.isYoutube ? data:imgurl + "=rw" : data:imgurl' expr:srcset='data:imgurl.isYoutube ? "" : sourceSet(data:imgurl, [640, 1280], "3:2")' height='426' name='img' sizes='(max-width:640px) 100vw, 1280px' width='640'>
     <b:attr name='b:whitespace' value='remove'/>
     <b:if cond='data:imgurl.isYoutube'>
     <b:attr expr:value='resizeImage(data:imgurl, 640, "3:2") + "-rw-e100 640w, " + resizeImage(data:imgurl, 1280, "3:2") + "-rw-e100 1280w"' name='data-hdss'/>   
