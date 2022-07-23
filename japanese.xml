@@ -803,7 +803,7 @@ body#layout .sidebar-invisible {content-visibility:visible;visibility:visible}]]
             <b:include name='content'/>
         </b:includable>
             <b:includable id='authorProfileImage'>
-  <img expr:class='data:team ? "tp-img" : "ip-img"'' expr:alt='data:messages.myPhoto' expr:height='data:team ? 44 : data:authorPhoto.height' expr:loading='data:blog.isMobileRequest ? &quot;lazy&quot; : &quot;eager&quot;' expr:src='data:authorPhoto.image' expr:width='data:team ? 44 : data:authorPhoto.width'/>
+  <img expr:class='data:team ? "tp-img" : "ip-img"' expr:alt='data:messages.myPhoto' expr:height='data:team ? 44 : data:authorPhoto.height' expr:loading='data:blog.isMobileRequest ? &quot;lazy&quot; : &quot;eager&quot;' expr:src='data:authorPhoto.image' expr:width='data:team ? 44 : data:authorPhoto.width'/>
 </b:includable>
             <b:includable id='content'>
   <b:if cond='data:team'>
@@ -1716,7 +1716,7 @@ button</b:comment>
             <b:include name='content'/>
         </b:includable>
             <b:includable id='authorProfileImage'>
-  <img expr:class='data:team ? "tp-img" : "ip-img"'' expr:alt='data:messages.myPhoto' expr:height='data:team ? 44 : data:authorPhoto.height' expr:loading='data:blog.isMobileRequest ? &quot;lazy&quot; : &quot;eager&quot;' expr:src='data:authorPhoto.image' expr:width='data:team ? 44 : data:authorPhoto.width'/>
+  <img expr:class='data:team ? "tp-img" : "ip-img"' expr:alt='data:messages.myPhoto' expr:height='data:team ? 44 : data:authorPhoto.height' expr:loading='data:blog.isMobileRequest ? &quot;lazy&quot; : &quot;eager&quot;' expr:src='data:authorPhoto.image' expr:width='data:team ? 44 : data:authorPhoto.width'/>
 </b:includable>
             <b:includable id='content'>
   <b:if cond='data:team'>
