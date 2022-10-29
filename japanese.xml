@@ -436,7 +436,7 @@ html[dir="rtl"] #shbtn.reverse, html[dir="rtl"] #search_expand.reverse {transfor
 
 /* ページボディー */
 .feed-view #main {padding-bottom:var(--maincolumn-padding)}
-.hfeed {display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));gap:var(--maincolumn-padding)}
+.hfeed {display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:var(--maincolumn-padding)}
 .hfeed>.post, .hentry {background-color:$(posts.background.color);padding:20px var(--maincolumn-padding);box-sizing:border-box}
 .hfeed>.post {display:grid;grid-template-rows:auto 1fr auto}
 .hfeed>.post+aside {align-self:stretch;display:grid}
