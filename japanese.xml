@@ -472,7 +472,7 @@ blockquote {margin:1em 2.5em}
 .post-footer {display:flex}
 .hentry .post-footer {flex-direction:column}
 .post-footer-line>span {display:block;margin-bottom:20px}
-.pf-last {margin:0;list-style-type:none;padding-left:0;text-align:$endSide;font-style:oblique}
+.pf-last {margin:0;list-style-type:none;padding-$startSide:0;text-align:$endSide;font-style:oblique}
 .link-url {word-break:break-all}
 a.archive-link, a.jump-link {color:$(posts.link.color)}
 .archive-link {margin-$endSide:auto}
@@ -743,7 +743,7 @@ header:has(.snippet-title) {width:calc($(content.width / 2) - var(--maincolumn-p
 .item-view .post-body>.separator:first-child>a[imageanchor="1"]:first-child {
 margin-top:20px}
 .post-body a[imageanchor] {display:block}
-.item-view .post-body a[imageanchor="1"] {margin-left:0 !important;margin-right:0 !important}
+.item-view .post-body a[imageanchor="1"] {margin-left:0 !important;margin-$endSide:0 !important}
 .item-view .post-body a[imageanchor="1"]+a[imageanchor="1"] {margin-top:16px}
 
 /* アドセンス広告 */
@@ -2213,8 +2213,8 @@ const commentForm = comments.querySelector("iframe#comment-editor");
 if (commentForm) subContentObserver.observe(comments);
 /* Summary button */
 const aab = wfsc.querySelector("div.smtx").lastElementChild, pau = aab.previousElementSibling;
-pau.textContent = Blog1.querySelector("a.published&gt;time").textContent + " / " + Blog1.querySelector("li.updated&gt;time").textContent;
-if (Blog1.querySelector(".fn")) aab.insertAdjacentHTML("afterbegin", Blog1.querySelector(".fn").textContent + " - ");
+pau.textContent = `${Blog1.querySelector("a.published&gt;time").textContent}/${Blog1.querySelector("li.updated&gt;time").textContent}`;
+if (Blog1.querySelector(".fn")) aab.insertAdjacentHTML("afterbegin", `${Blog1.querySelector(".fn").textContent}-`);
 summary_button.addEventListener("click", event =&gt; wfsc.classList.toggle("hidden"));
 </b:if>});</script>
 </body>
