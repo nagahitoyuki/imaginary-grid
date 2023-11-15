@@ -476,9 +476,9 @@ a.archive-link, a.jump-link {color:$(posts.link.color)}
 .author-desc {color:$(posts.text.color)}
 
 /* Post body and snippet */
-.entry-content, .summary {font:$(posts.text.font);line-height:var(--body-lineheight);color:$(posts.text.color)}
+.hentry, .summary {font:$(posts.text.font);line-height:var(--body-lineheight);color:$(posts.text.color)}
+.hentry a, .hentry a:hover, .hentry a:visited {color:$(posts.link.color)}
 .entry-content {margin-top:20px;margin-bottom:20px}
-.entry-content a, .entry-content a:hover, .entry-content a:visited {color:$(posts.link.color)}
 .entry-content blockquote {color:$(blockquote.color);font:$(blockquote.font);line-height:inherit}
 .total-snippet {display:block;margin-bottom:20px}
 .total-snippet>.snippet-thumbnail {aspect-ratio:1.5;width:100%;height:auto;object-fit:cover;margin-bottom:1em}
