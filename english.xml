@@ -81,7 +81,7 @@ bglk.as = "image"; bglk.rel = "preload"; bglk.href = /\/\/.+\.(jpg|jpeg)/i.exec(
       default="$(color) none no-repeat scroll center center" value="$(color) url(https://themes.googleusercontent.com/image?id=0BwVBOzw_-hbMZDYxMjBkNzQtZWFhMC00MTIxLWE2ZWItNWU0M2FmMTA0NTM5) repeat scroll top center /* Credit: Ollustrator (http://www.istockphoto.com/portfolio/Ollustrator?platform=blogger) */"/>
   <Variable name="blog.header.color" description="Blog header color"
       type="color"
-      default="#696969"  value="#696969"/>
+      default="#bd4f00"  value="#bd4f00"/>
   <Variable name="body.background.color" description="Body background color"
       type="color"
       default="#fff5ee"  value="#fff5ee"/>
