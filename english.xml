@@ -1971,7 +1971,8 @@ if (entry.rootBounds.bottom &gt; entry.boundingClientRect.bottom) {
 if (button === back_button) {
 mbtn(button, 'fadein'); fbt.style.width = "100%"; return; }} else {
 mbtn(button, 'fadeout'); }}}); });
-/* Sub content observer */function fxsb() {
+/* Sub content observer */
+function fxsb() {
 sbct.classList.add("slider"); sbct.classList.add("sidebar-invisible"); hamburger_menu.style.transform = "rotateZ(0)"; sbct.ariaHidden = "true"; }
 function rtsb() {
 sbct.classList.remove("slider"); sbct.classList.remove("sidebar-invisible"); hamburger_menu.style.transform = "rotateZ(90deg)"; sbct.ariaHidden = "false"; }
