@@ -2,7 +2,7 @@
 
 <figure><img src="https://raw.githubusercontent.com/nagahitoyuki/imaginary-grid/master/imaginary.jpeg" alt="Header image of Imaginary"><figcaption>Header image｜<a href="https://imaginary-theme.blogspot.com/">Imaginary theme</a></figcaption></figure><br><br>
 
-<p>I introduce Imaginary with liquid design (one column index page) for Japanese and English.</p>
+<p>I introduce Imaginary with grid design (two columns index page) for Japanese and English.</p>
 
 <h3>Some features</h3>
 
