@@ -2043,7 +2043,7 @@ const bcsd = document.createElement("div");
 bcsd.classList.add("dim-overlay"); bcsd.classList.add("fadeout"); bdis.appendChild(bcsd);
 function hbmb() {
 if (sbct.classList.contains("slider")) {
-bcsd.classList.remove("fadeout"); bcsd.classList.add("fadein"); requestAnimationFrame(() =&gt; sbct.classList.add("slidein")); sbct.ariaHidden = "false"; sbct.classList.remove("sidebar-invisible"); bdis.classList.add("sidebar-visible"); } else {
+bcsd.classList.remove("fadeout"); requestAnimationFrame(() =&gt; sbct.classList.add("slidein")); sbct.ariaHidden = "false"; sbct.classList.remove("sidebar-invisible"); bdis.classList.add("sidebar-visible"); } else {
 location.href = "#attribution"; }}
 hamburger_menu.addEventListener("click", hbmb);
 /* Close button */
