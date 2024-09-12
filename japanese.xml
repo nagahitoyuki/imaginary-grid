@@ -1215,6 +1215,7 @@ button</b:comment>
    <b:else/>
     <div class='no-posts-message'><b:eval expr='data:view.isSearch ? data:messages.noResultsFound : data:messages.theresNothingHere'/></div></b:if>
     <b:else/>
+    <script id='sdob' type='application/ld+json'><b:loop index='i' values='data:posts' var='post'><b:include data='post' name='postMeta'/></b:loop></script>
   <b:comment>Cap the total number of ads (widgets and inline ads).</b:comment>
   <b:with value='3' var='maxNumAds'>
   <b:with value='data:widgets.AdSense.size' var='numAds'>
@@ -1223,8 +1224,7 @@ button</b:comment>
       <b:tag aria-busy='false' cond='data:view.isMultipleItems' expr:class='data:posts.length == 1 ? "hfeed set-one" : "hfeed"' name='div'><b:loop index='i' values='data:posts' var='post'><b:include data='post' name='postCommentsAndAd'/></b:loop></b:tag>
   </b:with>
   </b:with>
-  </b:with>
-    <script id='sdob' type='application/ld+json'><b:loop index='i' values='data:posts' var='post'><b:include data='post' name='postMeta'/></b:loop></script></b:if>
+  </b:with></b:if>
 </b:includable>
     <b:includable id='aboutPostAuthor'>
   <div class='author-name'>
